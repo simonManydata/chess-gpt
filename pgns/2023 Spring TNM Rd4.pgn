@@ -1,0 +1,1316 @@
+[Event "2023 Spring TNM: 2000+"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "1"]
+[White "Widjaja, Luke"]
+[Black "Dasika, Archit"]
+[Result "0-1"]
+[ECO "B11"]
+[WhiteElo "2085"]
+[BlackElo "2143"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "100"]
+[EventDate "2023.??.??"]
+
+1. e4 c6 2. Nc3 d5 3. Nf3 Bg4 4. h3 Bxf3 5. Qxf3 e6 6. g3 Nf6 7. Bg2 Bc5 8. O-O
+Nbd7 9. d3 O-O 10. Qe2 dxe4 11. dxe4 e5 12. Na4 Bd6 13. f4 Qc7 14. f5 Rfe8 15.
+g4 Nc5 16. Nxc5 Bxc5+ 17. Kh2 Rad8 18. g5 Nd7 {[#]} 19. g6 hxg6 20. fxg6 fxg6
+21. Qc4+ Kh7 22. Rf7 Qd6 23. Bg5 Nb6 24. Qe2 Rd7 25. Raf1 Qe6 26. Rxd7 Nxd7 27.
+h4 Rf8 28. Bh3 Qe8 29. h5 gxh5 30. Bf5+ Kh8 31. Qg2 Nf6 32. Rd1 g6 33. Bh3 Nh7
+34. Rf1 Rxf1 35. Qxf1 Nxg5 36. Qf6+ Kh7 37. Qxg5 Qf8 38. Qg2 {[#]} Qf2 39. Qxf2
+Bxf2 40. Kg2 Be3 41. Kf3 Bc1 42. b3 g5 43. Bf5+ Kh6 44. a4 g4+ 45. Kg2 Kg5 46.
+c4 c5 47. a5 h4 48. Bc8 h3+ 49. Kh1 Kh4 50. b4 g3 0-1
+
+[Event "2023 Spring TNM: 2000+"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "2"]
+[White "Hao, Max"]
+[Black "Diaz, Conrado"]
+[Result "0-1"]
+[ECO "A51"]
+[WhiteElo "2047"]
+[BlackElo "2262"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "112"]
+[EventDate "2023.??.??"]
+
+1. d4 Nf6 2. c4 e5 {Budapest Gambit -- not common.} 3. dxe5 Ne4 {The Fajorowicz
+Variation -- *definitely* not common at all!} 4. a3 d6 5. Nf3 Nc6 6. Qd5 Nc5 7.
+Bg5 f6 8. exf6 gxf6 9. Bh4 Be6 10. Qh5+ Bf7 11. Qf5 Bg7 12. Nc3 O-O 13. e3 Bg6
+14. Qd5+ Kh8 15. Qd1 a5 16. b3 Qd7 17. Be2 f5 18. Rc1 f4 19. Bg5 Bxc3+ 20. Rxc3
+Ne4 21. Bh6 Nxc3 22. Qa1 {[#]} fxe3 23. Qxc3+ Kg8 24. Bxf8 exf2+ 25. Kxf2 Rxf8
+26. Re1 Qg7 27. Qxg7+ Kxg7 28. Bd1 b6 29. Ke3 Re8+ 30. Kd2 Ne5 31. Kc3 c5
+{Computers say: dead drawn. But with fixed pawns on the bishops' color, there
+are latent possibilities...} 32. h3 {Another pawn on light?! Max probably had
+the thought "I'll keep my pawns where they can be guarded by my bishop."
+Suicide.} Nxf3 33. Rxe8 Bxe8 34. Bxf3 Bg6 {Still "0.00"...} 35. Be2 Be4 36. Bf3
+{Is Max sure about that king and pawn ending?} (36. g3 {keeps it "normal"})
+36... Bg6 {I guess not just now.} 37. Be2 h6 38. Bd3 Be8 39. Be4 Kf6 {[#]} 40.
+Kd3 $6 {It's not too late to control squares nicely with} (40. g3 {and h3-h4})
+40... Ke5 41. Ke3 b5 $1 {[#] This could just be too much to think about in time
+pressure.} 42. Bd5 $4 b4 $4 (42... a4 $19 {sets up connected passed pawns,
+which as usual sweep down the board. White's outside passed pawn remains
+insignificant.} 43. bxa4 bxc4 $1 44. Bxc4 Bxa4) 43. a4 $4 (43. axb4 $1 cxb4 44.
+g3 a4 (44... Bg6 45. Bc6 Bc2 46. Ba4 {White can tap the bishop with Kd2 and get
+back to e3 right after.}) 45. bxa4 Bxa4 46. Kd3 $11 {easily stops the b-pawn.})
+43... Bg6 $19 {This isn't the same at all.} 44. Kd2 Kf4 45. Bf3 Kg3 46. Bd5 h5
+47. Bf3 h4 48. Bd5 Kf2 {Diaz takes a detour from the winning plan, but happens
+onto it soon enough (and there's nothing Hao can do about it, with the b-pawn
+to tend to).} 49. Bf3 Kg3 50. Bd5 Kf4 51. Bf3 Be4 $1 {[#] The key. Black can
+use his extra pawn on the queenside, while White's majority is stuck.} 52. Bxe4
+Kxe4 53. Ke2 {[#]} d5 {Once.} 54. cxd5 Kxd5 55. Kd3 c4+ {Twice!} 56. bxc4+ Kc5
+0-1
+
+[Event "2023 Spring TNM: 2000+"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "3"]
+[White "Ivanenko, Anthony Vladimir"]
+[Black "Winslow, Elliott"]
+[Result "1-0"]
+[ECO "B99"]
+[WhiteElo "2147"]
+[BlackElo "2219"]
+[Annotator "Ivanenko,Tony/(Winslow,Elliott)"]
+[PlyCount "65"]
+[EventDate "2023.??.??"]
+
+{(EW): This game is very annoying for me. I've played into this line before,
+*and* I know how to meet it, **and** I've even written it up that previous time
+in the TNM archive! ***AND***, I spent all my time investigating the *other*
+line, 10...b5 11.Bxf6 Nxf6 12.g5 Nd7 13.f5 0-0!, which I've analyzed before,
+and then just had a spurious change of mind. This is not the way to do
+things...} 1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 {Sicilian
+Defense: Najdorf Variation. Win or lose, I'm always excited to see this opening
+show up on the board -- with a rich history and many theoretical ideas, it is
+1.e4 opening of champions (alongside the Spanish Opening) and was favored by
+Fischer and Kasparov in their heyday.} 6. Bg5 {The old main line, although that
+title belongs to the English Attack (6.Be3) these days. I was deliberating on
+whether I wanted to go into this or not, as I had already played this once
+before and my opponent had undoubtedly prepared for it. However, I decided to
+bite the bullet and see what he had in store for me. As a show of display,
+here're the numerous options White had played at top level over the past few
+years:} (6. Be3) (6. h3) (6. Be2) (6. Bc4) (6. g3) (6. a4) (6. Bd3 $5) 6... e6
+7. f4 (7. Qf3 Nbd7 8. O-O-O Qc7 {has also been tested at top level in recent
+years, for example:} 9. Qg3 h6 10. Be3 b5 11. Bxb5 axb5 12. Ndxb5 Qb8 13. Nxd6+
+Bxd6 14. Qxd6 Qxd6 15. Rxd6 Ng4 16. Re1 Nxe3 17. Rxe3 Ne5 18. b3 Ke7 19. Rb6 g5
+20. f3 Ba6 21. a4 Rhb8 22. Rxb8 Rxb8 23. Nb1 Kd6 24. Nd2 Kc5 25. Kb2 Rd8 26.
+Kc3 Kb6 27. Re1 h5 28. b4 h4 29. b5 Bb7 30. h3 Rc8+ 31. Kb3 Rd8 32. Rd1 Kc7 33.
+Kc3 Ng6 34. Re1 Nf4 35. Nc4 f6 36. a5 Nxg2 37. Ra1 g4 38. hxg4 h3 39. a6 Ba8
+40. b6+ Kb8 41. Na5 Nf4 42. Rb1 Ne2+ 43. Kc4 Rd7 44. a7+ Kc8 45. b7+ Rxb7 46.
+Nxb7 Bxb7 47. Rh1 Nf4 48. Kd4 e5+ 49. Ke3 Kc7 50. Ra1 Ba8 51. Rb1 Bb7 52. Kf2
+Ne6 53. Kg3 Nd4 54. Ra1 Ba8 55. Rh1 {1-0 Niemann,H (2637)-Albornoz Cabrera,C
+(2574) Capablanca Memorial Elite 55th Havana 2022 (7)}) 7... Be7 8. Qf3 Qc7 9.
+O-O-O Nbd7 {The Three-Piece System. I had previously played this in my very
+first game at the last TNM so I was a bit hesitant in repeating it, knowing
+full well that my opponent looked over it, but then I realized that I couldn't
+remember the 10.Bd3 lines very well when I was recounting them...} 10. g4
+{...so I decided to stick with the traditional main line. It's amazing how this
+position has shown up in over 5000 games at this point and yet it never gets
+boring!} (10. Bd3) 10... h6 $5 {[#]  This has definitely become one of the
+major tests to 10.g4 these days, played almost as frequently as the traditional
+10...b5 line. The ...h6 here is quite different to the typical three-piece
+system with ...h6 -- White has already committed to the pawn storm by playing
+g2-g4 and thus has to play more actively to unearth the Black king. On the
+other hand, because Black waited so long to kick the bishop, White has already
+gathered enough resources to release the tension along the h4-d8 diagonal and
+trade off the dark squared bishop.} (10... b5 11. Bxf6 Nxf6 12. g5 Nd7 13. f5
+{is the traditional main line and was featured in one of my games:} Bxg5+ 14.
+Kb1 Ne5 15. Qh5 Qd8 16. Nxe6 Bxe6 17. fxe6 O-O 18. h4 Be7 19. Bh3 f6 20. Nd5
+Rc8 21. Bf5 g6 22. Rdg1 Qe8 23. Qh6 Kh8 24. h5 {1-0 Ivanenko,A (1712)-Gu,C
+(1525) New Year's TNM (1)}) 11. Bxf6 {(EW): 'The big theoretical line, but
+hardly the only way to go.'} (11. Bh4 {(EW): '(which could have happened
+earlier, had Black tossed in ...h6)' has also been tried, but not to great
+success as it scores rather poorly. For example:} g5 12. Bf2 ({(EW):} 12. e5 $5
+dxe5 (12... gxh4 13. exf6 Nxf6 (13... Bxf6 $5) 14. g5 {pushes through when
+Black's king is in danger.}) 13. fxg5 hxg5 14. Bg3 {is also quite a dangerous
+pawn sacrifice (and sometimes more!), with White scoring well.}) ({(EW) So many
+players have sleepwalked into} 12. fxg5 Ne5 {where Black has scored very well,
+but it's not so simple either.}) 12... gxf4 13. h4 Ne5 14. Qxf4 Nexg4 15. Qf3
+Nxf2 16. Qxf2 Bd7 17. Rg1 Qc5 18. Qh2 O-O-O 19. Nb3 Qe5 20. Qf2 Bc6 21. Nd4 Qc5
+22. Qe1 Rhg8 23. Rxg8 Rxg8 24. Nxc6 Qxc6 25. e5 dxe5 26. Qxe5 Qc7 27. Qe3 Ng4
+28. Qf3 Ne5 29. Qe3 Bxh4 30. Kb1 Bg5 31. Qa7 Nc6 32. Qf2 Rd8 33. Re1 Bd2 34.
+Rd1 Bxc3 35. Rxd8+ Nxd8 36. bxc3 Qxc3 37. Bd3 h5 38. Qh4 Qe5 39. Qe7 Qc7 40.
+Qg5 Qb6+ 41. Kc1 Qd4 42. Qxh5 f5 43. Qf3 Qa1+ 44. Kd2 Qxa2 45. Qg3 Qa5+ 46. Kc1
+Qa1+ 47. Kd2 Qa5+ 48. Kc1 Qc7 49. Qg5 Qe5 50. Qe7 Nc6 51. Qf8+ Kc7 52. Qf7+ Kb6
+53. Bc4 Qa1+ 54. Kd2 Qd4+ 55. Bd3 Qf4+ 56. Kd1 Qg4+ 57. Kc1 Qg5+ 58. Kb2 Qe7
+59. Qg6 a5 60. Qg1+ Qc5 61. Qg8 Qb4+ 62. Kc1 a4 63. Qxe6 a3 64. Bxf5 Qb2+ 65.
+Kd2 a2 66. Qe3+ Qd4+ 67. Qxd4+ Nxd4 {0-1 Dardha,D (2604)-So,W (2771) Titled
+Tuesday intern op 27th Sep Early Chess.com INT blitz 2022 (5)}) (11. Qh3 $5
+{has to be investigated further.}) ({Even} 11. h4 $5 {can't be brushed off so
+easily.}) 11... Bxf6 12. h4 {[#]  No point in beating around the bush -- White
+has already played g2-g4, intending the pawn storm, so the best way is forward,
+adding more fuel to the fire and targeting the g5-square.} Qb6 {This is the
+"old main line" in the 10...h6 variation, attacking the white knight to drive
+it from the center and then placing the knight on the nice c5-square. However,
+recent practice has shown that Black exerts more pressure with the c5/b6 pieces
+swapped. (EW): '?'} ({(EW): 'Theory has moved on, to'} 12... Nb6 $5 13. g5 Bxd4
+14. Rxd4 Qc5 {is the modern try these days, with one game going:} 15. Rd2 Bd7
+16. Be2 Rc8 17. gxh6 Rxh6 18. h5 Na4 19. Nxa4 Bxa4 20. c3 Bc6 21. Rhd1 Ba4 22.
+b3 Bb5 23. c4 Bc6 24. Kb2 Rd8 25. Qg3 Bxe4 26. Rd4 Qf5 27. Qxg7 Rh7 28. Qg1 Qf6
+29. Qg5 Qxg5 30. fxg5 d5 31. cxd5 exd5 32. h6 Ke7 33. Bc4 Rhh8 34. Re1 f5 35.
+Rxd5 Rdf8 36. Re5+ Kd6 37. Re6+ Kc7 38. g6 b5 39. g7 {1-0 Brkic,A (2621)-Van
+Foreest,J (2691) FIDE Grand Swiss Riga 2021 (7)}) 13. Nde2 $5 {I quite like
+this knight maneuver personally, as I find the knight better placed towards the
+center, where it can spring to f4 at a moment's notice.} (13. Nb3 {(EW) 'is the
+other move, also good.'} Be7 14. Kb1 Nc5 {is the more frequent alternative
+attempt, but I find the knight rather misplaced on b3 where it justs serves as
+a "hook" for enemy pieces.} 15. g5 (15. Nd4 Bd7 16. Bg2 O-O-O 17. g5 Kb8 18.
+Rd2 hxg5 19. hxg5 Rxh1+ 20. Bxh1 Rh8 21. Bg2 g6 22. Rd1 Na4 23. Nxa4 Bxa4 24.
+Qa3 Bd7 25. e5 Bf8 26. exd6 Bxd6 27. Nc6+ Bxc6 28. Qxd6+ Qc7 29. Qd4 e5 30. Qg1
+Bxg2 31. Qxg2 exf4 32. a3 Rd8 33. Rf1 Qe5 34. a4 f6 35. gxf6 Qxf6 36. Qg4 g5
+37. Rg1 Rd2 38. Re1 f3 39. Qg3+ Ka7 40. Qc7 f2 41. Rf1 Re2 42. Ka2 Qc6 {0-1
+Perunovic,M (2534)-Kempinski,R (2561) EU-chT (Men) 14th Plovdiv 2003 (5.3)})
+15... Bd7 16. f5 hxg5 17. hxg5 O-O-O 18. fxe6 Bxe6 19. Bh3 Bxg5 20. Nd5 Qc6 21.
+Rdg1 Bf6 22. Rxg7 Bxg7 23. Ne7+ Kc7 24. Nxc6 Nxb3 25. axb3 Kxc6 26. Bxe6 Rxh1+
+27. Qxh1 fxe6 28. Qh7 Rd7 29. Qh8 e5 30. Qc8+ Rc7 31. Qe6 Rd7 32. Qc4+ Kb6 33.
+Qc8 Rc7 34. Qd8 Kc6 35. b4 Bh6 36. c4 b6 37. c5 dxc5 38. bxc5 Kb7 39. Qd5+ Kb8
+40. Qd6 {1-0 Guseinov,G (2650)-Kokarev,D (2588) Khanty-Mansiysk Governor Cup
+2008 (5)}) 13... Nc5 (13... Be7 14. g5 Nf8 $5 {is an idea that still hasn't
+been tested at high level, where Black intends to play ...d7/g6 and
+control the critical f4/e6 squares. It isn't scary, but does require rather
+precise play from White to counter.} 15. Kb1 Bd7 16. Nd4 hxg5 17. hxg5 Rxh1 18.
+Qxh1 O-O-O 19. Qh8 Ng6 20. Qxg7 Nxf4 21. Nce2 $16 {and the engine tends to
+favor White in this position, although proving that advantage is a task in and
+of itself.}) 14. g5 Be7 {[#]  I had been slightly worried since the 10th move
+since I realized that my memory of this sideline was ending in this position,
+which is still very much critical and not easy to play. However, due to
+calculating it out ahead of time, I didn't panic and simply stopped myself for
+a deep think in this position. Black's plan is quite evident: he wants to play
+...d7, followed by ...c8, and then bust open White's -side with
+...a4. But what about White? Where does his advantage lay? Well for
+starters, he has a massive -side space advantage. But how does he use it?
+15.g6 is main try and it is engine-approved, but I found it releases the
+tension too quickly. White would very much like to play 15.f5, but it runs into
+15...hxg5. After struggling to figure out how to fit in the move, lo and
+behold...!} 15. Qh5 $5 $14 {[#] Out of the 37 games in my Mega Database,
+several of which were played by top GMs, this engine-preferred move was
+shockingly only played twice! The concept behind it is relatively simple: White
+wants to force f4-f5 by pinning the h6-pawn to h8. In addition, there's also
+the added bonus of threatening the f7-pawn, which means it's not so easy for
+Black to castle -side anymore. (EW) '?! This vies for top spot with 15.f5!?
+and 15.g6!?''} (15. f5 $5) (15. g6 $5) 15... g6 {Only move really, f4-f5 was
+being threatened and Black couldn't really afford it.} ({For an example line if
+Black allows:} 15... Bd7 $6 16. f5 exf5 $2 (16... Bc6 {would be Black's best
+try:} 17. fxe6 Nxe6 18. g6 $3 O-O-O 19. gxf7 $16 {h3 and Black's position
+is looking rather porous.}) 17. Nd5 $1 {That's the point! White opens up
+d5-square for his knight, which quickly becomes powerful in the center.} Qa5
+18. exf5 Bxf5 19. Nec3 $18 {And while Black may have a pawn advantage, his
+loose pawns and pieces pose the question of how he will be solving the dilemma
+of the unsafe king.}) 16. Qf3 {The queen sulkingly retreats back to its
+original position, but the objective has been achieved: Black weakened his
+­-side pawn structure and introduced a second "hook" on g6. The second
+prong of this attack has been revealed.} Bd7 $6 $16 {I feel as if my opponent
+might have misjudged the dynamics of this position and thought he had more time
+to parry the -side assault. Unfortunately, it turns out that he was just one
+tempo too short to afford this.} ({Black's best try was} 16... hxg5 {(EW): "!?"
+although after} 17. hxg5 Rxh1 18. Qxh1 Bd7 19. Qh8+ Bf8 20. Nd4 {Black is
+practically forced to resort to the sad-looking} ({(EW)} 20. Qg8 $6 Bc6 $1
+{intending ...Qc7 and ...0-0-0.}) 20... Qd8 $14 {to defend his position, with
+the intention of ...e7. Black doesn't have any obvious weaknesses to play
+against, but it does leave a sour taste having to give up all your initiative
+and erect a barricade this early into the game.} (20... O-O-O $2 21. Qf6 $16
+{White's activity on the ­-side is too overwhelming for White and the pawns
+will begin falling in short order.})) (16... h5 $2 {Winslow,Elliott: '?!'} 17.
+f5 $1 ({Predecessor:} 17. Ng3 Bd7 18. f5 O-O 19. f6 Bd8 20. Nxh5 Bc6 21. Rxd6
+Bc7 22. Rd1 Be5 23. Ng3 Bxc3 24. bxc3 Na4 25. h5 Qb2+ 26. Kd2 Rfd8+ 27. Bd3
+Qxc3+ 28. Ke2 Nb2 29. hxg6 fxg6 30. f7+ Kf8 31. Rdf1 Nxd3 32. cxd3 Qc2+ 33. Ke3
+Rxd3+ 34. Kf4 Rxf3+ 35. Rxf3 Kxf7 36. Kg4+ Kg7 37. Nf1 Qg2+ 38. Rg3 Qxh1 39.
+Ne3 Bxe4 40. Rh3 Bf5+ 41. Nxf5+ exf5+ 42. Kg3 Qg1+ 43. Kh4 Qg4# {0-1
+Li,E-Chen,D (1854) PNWCC Online blitz JP 8th Chess.com INT 2020 (5)}) (17. Bh3
+{Winslow,Elliott}) 17... Bd7 (17... gxf5 $6 18. exf5 exf5 $4 19. Nd5 Qd8 20.
+Nd4 $18 {would just be horrible for Black with his misconstrued pieces.}) 18.
+Bh3 gxf5 19. Rhf1 $1 {Avoiding the skewer with c6.} O-O-O 20. exf5 $18 {and
+the position is already looking quite bad for Black, with the lack of space for
+his pieces and no initiative whatsoever.}) 17. h5 $1 {Only move. It's now or
+never for White, he must use the -side initiative before Black castles and
+firmly consolidates his pieces in the center. (EW): '!'} hxg5 $2 {Another
+misstep, perhaps not realizing how necessary it is to keep the h-file closed as
+Black's h8 is a much more useful defender than White's h1 an attacker.}
+({Black needed to give up on the pawn: Winslow,Elliott: 'Black could try to
+hold with'} 17... O-O-O 18. hxg6 fxg6 19. gxh6 ({or} 19. Rxh6 {Winslow,Elliott}
+Rxh6 20. gxh6 Rh8) 19... Bf8 (19... Rh7 {Winslow,Elliott}) 20. h7 Bg7 21. Bg2
+$16 {and while h7 will remain a thorn in Black's side for many moves to come,
+his pieces at least enjoy activity.}) 18. hxg6 O-O-O {At this point, it was
+really a matter of picking the lesser of two evils for Black and I agree with
+it, as the other move provides White with many choices.} ({Worse is} 18... Rxh1
+$2 19. Qxh1 ({Or White could elect to drag the Black king out of safety:} 19.
+gxf7+ Kxf7 20. Qxh1 gxf4 $2 21. Nxf4 $18 {where Black has a daunting task of
+defending his king.}) 19... O-O-O 20. Qh7 $1 {[%cal Yh7e7]} ({Even} 20. g7
+{looked scary to my eye with} Rg8 21. Qh7 Qd8 22. b4 Na4 23. Nxa4 Bxa4 24. f5
+$16 {where White's g7-pawn is secured by Black's own interfering pawn
+structure, although I couldn't find anything concrete after this during the
+game.}) 20... Re8 21. Qxf7 $18) 19. Rxh8 Rxh8 20. gxf7 Rf8 21. fxg5 Bxg5+ 22.
+Kb1 {And after a quick series of moves between us — Black is struck with a
+decision: how should he continue? I was already enjoying my position with the
+extra pawn and was planning on consolidating via h3-f1/g1-g8. Thus,
+Black's biggest challenge to White would be challenging the f7-pawn's
+presence...} Qd8 {[#] ...which my opponent wisely chooses to do.} 23. b4 $5 {It
+seems as if I must play at least one flashy, yet completely unnecessary move
+every single game. While pondering over 22...d8, I realized that the move
+isn't quite as innocuous as it first seemed, so I was trying to work out every
+variation for 23.h3 and was getting close but hadn't solve every issue with
+it. Likewise, I tried 23.e5 and was still unsatisfied with it. Dismayed, I
+asked myself, "What would Stockfish do?" And came up with the solution: whole
+board play! Now that my opponent has focused his attention onto the -side
+pawn, I can shift mine to the -side to rattle his loose knight. My point is
+clear: bring back the queen and lose your tempo or lose your knight. And now
+here I am, sitting in front of Stockfish as my engine shakes his head at me.
+(EW): '?!'} ({Turns out my original idea works:} 23. Bh3 $1 {where I wasn't
+certain about} Qf6 (23... Bf6 {had an easy solution in} 24. b4 $3 $18 {and now
+both d8 and d7 are overloaded with squares they need to protect.}) (23...
+Qe7 {presented no problems either after} 24. Rf1 $18 {when the pawn is
+protected and White gets to consolidate his advantage.}) 24. Qh5 Rxf7 {and now
+this was the sequence I missed:} 25. e5 $1 dxe5 26. b4 Na4 27. Ne4 $18
+{d6+/xf7, winning the exchange.}) ({Turns out} 23. e5 {works too:}
+dxe5 24. Bg2 Qf6 25. Qg4 $1 {Sidestepping the challenge and threatening g5.}
+Rxf7 26. b4 Na4 27. Ne4 $18 {with similar ideas as before.}) 23... Qb6 {White's
+plan worked, but it comes with a price: he must endure a series of only moves
+to retain his advantage. Fortunately, I already had the idea in mind, so it
+didn't prove much of a challenge. (EW): '! Right back.'} 24. a3 $8 a5 25. Na2
+$8 ({I had briefly considered} 25. Rd4 $2 {but realized that after} axb4 26.
+axb4 Na6 $11 {The rook is just awfully placed.}) 25... axb4 (25... Na4 $5
+{Winslow,Elliott}) 26. axb4 $3 {White needs to commit to the b4-pawn as a2
+serves the important role of guarding both the c3- and b4-squares.} (26. Nxb4
+$2 {just runs into} Na4 ({or} 26... Qd8 {where} 27. Bh3 Qf6 $11) 27. Bh3 Qb5
+28. Bg4 Qxe2 29. Qxe2 Nc3+ $11 {where Black's active bishops means that the 3P
+vs 2P endgame is just a dead draw.}) 26... Na6 (26... Na4 {runs into a long,
+almost forced sequence:} 27. Nd4 e5 28. Nf5 Rxf7 29. Bc4 $1 {Taking control of
+the key a2-g8 diagonal.} Rf8 30. Bb3 Kb8 31. Qg2 Bf6 32. Nxd6 $18 {where
+White's more active and better placed minors provides the full compensation he
+needs to convert the pawn-up endgame.}) 27. Nd4 {[#]  White plays the last
+necessary move of the sequence and emerges with a very nice position. All
+that's left is to trade a few pieces off the board to consolidate and press the
+pawn advantage into a winning endgame.  (EW): '!'} e5 {(EW): '?!'} 28. Bxa6 $6
+{I would hesitate to call this a mistake as White retains the advantage but it
+unnecessarily complicates the position. Fortunately, my opponent was in time
+trouble by now, so he didn't notice the proper continuation (or perhaps
+unfortunately(?), as I was pressured to prevent him from thinking on my time
+-- I should've spent more than 3 minutes on this move!)} (28. Nf5
+{Winslow,Elliott}) 28... bxa6 $2 ({At first I was worried that I didn't account
+for} 28... exd4 {but after} 29. Bc4 $18 {I realized the position is actually
+good for White.}) ({However, I really started to panic when I saw that after}
+28... Qxa6 {Winslow,Elliott: '!'} 29. Nf5 $2 {Black had the superb defense of}
+({I didn't see} 29. b5 {at the time, which requires quite a precise series of
+moves: (EW): '!'} Qa4 30. Nb3 Qc4 31. Qg3 Bd8 (31... Be7 {Winslow,Elliott} 32.
+Nc3 $16) 32. Rxd6 Rxf7 33. Rd5 $18 {where White is compensated by the pressure
+against the loose bishops and unsafe king.}) 29... Be6 $1 {[%csl Ga2] targeting
+a2} 30. Nxd6+ Kb8 31. Nc1 Be7 $11 {and White cannot actually hold onto the
+f7-pawn.}) 29. Nf5 Rxf7 30. Qh5 ({And obviously not} 30. Nxd6+ $4 Qxd6 $19
+{where it is Black's turn to play for a win.}) ({Turns out my other
+consideration was just as good:} 30. Rxd6 Rxf5 31. Qc3+ Qc7 32. exf5 $18) 30...
+Bxf5 31. Qxf7 ({I had also considered} 31. exf5 $5 {which after} Rxf5 32. Qg6
+$1 $18 {is just as winning for White.}) 31... Bxe4 32. Qg8+ Qd8 (32... Bd8 33.
+Qg4+ $18) 33. Qc4+ 1-0
+
+[Event "2023 Spring TNM: 2000+"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "5"]
+[White "Handigol, Abhishek"]
+[Black "Lessler, Peter"]
+[Result "1-0"]
+[ECO "D00"]
+[WhiteElo "2074"]
+[BlackElo "2251"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "73"]
+[EventDate "2023.??.??"]
+
+1. d4 Nf6 2. Nc3 d5 3. Bf4 c6 4. e3 Bf5 5. f3 e6 6. g4 Bg6 7. h4 h5 8. g5 Nfd7
+9. Bd3 Bxd3 10. Qxd3 c5 11. g6 f6 12. Nge2 Nc6 13. Nb5 Qa5+ 14. Nec3 Rc8 15. a3
+Qb6 16. O-O-O a6 {[#]} 17. Bc7 Rxc7 18. Nxc7+ Qxc7 $19 19. Kb1 Qb6 20. Kc1 Bd6
+21. Rhe1 Bg3 22. Rg1 Bxh4 23. dxc5 Nxc5 24. Qd2 Ne5 {[#]} 25. Nxd5 Qxb2+ (25...
+exd5) 26. Kxb2 Nc4+ 27. Kc3 Nxd2 28. Rxd2 exd5 29. Rxd5 $15 Ne6 30. Rb1 b5 31.
+Rbd1 (31. Rd6) 31... O-O $2 (31... f5 $1 32. Rxf5 Be7 $17) 32. Rxh5 $16 Bg5 33.
+f4 Bh6 (33... Bxf4 $5 34. exf4 Nxf4 35. Rc5 Nxg6 36. Rd6 $16) 34. Rd6 Rc8+ 35.
+Kb2 Nc5 {[#]} 36. Rxc5 Re8 37. Rxa6 1-0
+
+[Event "2023 Spring TNM: 2000+"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "6"]
+[White "Snyder, Larry"]
+[Black "Garcia, Eugenio Vargas"]
+[Result "1/2-1/2"]
+[ECO "B14"]
+[WhiteElo "2069"]
+[BlackElo "2140"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "79"]
+[EventDate "2023.??.??"]
+
+1. e4 c6 2. d4 d5 3. exd5 cxd5 4. c4 Nf6 5. Nc3 e6 6. Nf3 Be7 7. c5 O-O 8. b4
+b6 9. Rb1 a5 10. a3 {[#]} axb4 11. axb4 Bb7 12. Bd3 Ne4 13. Qc2 Nxc3 14. Qxc3
+Qc7 15. O-O Nd7 16. Re1 Bf6 17. Bb2 Rfe8 18. Qc2 g6 19. Bb5 Rec8 20. Rbc1 bxc5
+21. dxc5 Bc6 22. Bxf6 Nxf6 23. Bd3 Rcb8 24. Rb1 Bb5 25. Nd4 Bxd3 26. Qxd3 {[#]}
+e5 27. Nc2 d4 28. f4 exf4 29. Qxd4 Nh5 30. Qc4 {[#]} f3 31. gxf3 Nf4 32. b5 Rd8
+33. Rbd1 Rxd1 34. Rxd1 Qe5 35. Ne1 Qe3+ 36. Kh1 Nh3 37. Kg2 Nf4+ 38. Kh1 Nh3
+39. Kg2 Nf4+ 40. Kh1 1/2-1/2
+
+[Event "2023 Spring TNM: 2000+"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "7"]
+[White "Lewis, Edward"]
+[Black "Sanguinetti, George A"]
+[Result "1-0"]
+[ECO "A81"]
+[WhiteElo "1974"]
+[BlackElo "1900"]
+[PlyCount "91"]
+[EventDate "2023.??.??"]
+
+1. Nf3 f5 2. g3 g6 3. Bg2 Nh6 4. c4 Bg7 5. d4 Nf7 6. Nc3 c6 7. O-O O-O 8. e4 d6
+9. Qb3 Qb6 10. Be3 Qxb3 11. axb3 a6 12. Rfe1 e6 13. b4 Nd7 14. exf5 gxf5 15. b5
+cxb5 16. Nxb5 Rb8 17. Nc3 Nf6 18. Rad1 Bd7 19. Ng5 b5 20. Nxf7 Kxf7 21. Bf4 Ne8
+22. c5 b4 23. c6 Bxc6 24. Bxc6 bxc3 25. bxc3 Rc8 26. Bd7 Rxc3 27. Bxe6+ Kg6 28.
+Bd7 Nf6 29. Re6 Rd8 30. Ba4 Bf8 31. h4 h6 32. d5 Kf7 33. Re3 Rdc8 34. Bc6 Ne4
+35. Ra1 Rb8 36. Rxc3 Nxc3 37. Kg2 Rb2 38. Rxa6 Ne4 39. Be3 Be7 40. Ra7 h5 41.
+Bd7 f4 42. gxf4 Nc5 43. Be6+ Ke8 44. Ra8+ Bd8 45. f5 Ne4 46. f6 1-0
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "8"]
+[White "Kingma, Karl Stuart"]
+[Black "Walder, Michael"]
+[Result "0-1"]
+[ECO "B23"]
+[WhiteElo "1683"]
+[BlackElo "1954"]
+[PlyCount "34"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Nc3 e6 3. g3 d5 4. exd5 exd5 5. Bg2 Nf6 6. d4 cxd4 7. Qe2+ Be7 8.
+Nb5 Nc6 9. Bf4 O-O 10. O-O-O Bf5 11. Nf3 Be4 12. Rhg1 Qa5 13. a3 d3 14. cxd3
+Qxb5 15. Ne5 Rac8 16. Kb1 Bxa3 17. f3 Nd4 0-1
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "9"]
+[White "Khristoforov, Sergey"]
+[Black "Wong, Wilson"]
+[Result "1/2-1/2"]
+[ECO "D87"]
+[WhiteElo "1954"]
+[BlackElo "1673"]
+[Annotator "Wong,Wilson"]
+[PlyCount "100"]
+[EventDate "2023.??.??"]
+
+1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Bc4 c5 8.
+Ne2 Nc6 9. Be3 O-O 10. O-O Bg4 11. f3 Na5 12. Bxf7+ Rxf7 13. fxg4 Rxf1+ 14.
+Kxf1 Qd6 15. e5 Nc4 {Theory ends here.} 16. Bc1 $2 (16. Bc1 Nxe5 17. Bf4 Rf8
+18. dxe5 Bxe5 19. Qxd6 Bxd6 20. g3 g5 21. Kg2 gxf4 22. gxf4 {[%eval -133,0]}
+Bxf4 23. Rf1 Bg5 $6 {[%eval -104,0]}) 16... Qd5 17. Nf4 Rf8 18. Kg1 Qf7 $2 19.
+Qe2 $1 b5 20. a4 $2 a6 21. axb5 axb5 22. Rb1 $2 Rb8 23. Nd3 cxd4 24. cxd4 Qd5
+$1 25. Qf2 $2 (25. Qf2 Qe4 26. Qc2 Qxd4+ 27. Kh1 Rd8 28. Ne1 Qxg4 {[%eval
+-300,0]}) 25... Rf8 26. Nf4 $1 Qd7 27. g5 Bxe5 {I thought I had perpetual
+check, missing Kh1.} 28. dxe5 $18 Qd1+ 29. Qf1 Qd4+ 30. Kh1 Nd2 $6 31. Bxd2
+Qxd2 32. g3 $1 Qc2 33. Rxb5 Rd8 34. Nd5 $2 Qe4+ $1 35. Kg1 Qd4+ $1 36. Kg2 Qd2+
+$4 (36... Rxd5 $11 37. Rb8+ Rd8 38. Rxd8+ Qxd8 39. Qc4+ Kg7 40. h4 Qd2+) 37.
+Qf2 $4 (37. Kh3 $18 {Black is out of checks.}) 37... Rxd5 38. Rb8+ Kg7 39. Qxd2
+Rxd2+ 40. Kf3 Rxh2 41. e6 h6 42. Re8 hxg5 $1 43. Rxe7+ Kf6 44. Re8 Ra2 45. Kg4
+Ra4+ 46. Kf3 Ra3+ 47. Kg4 Ra4+ 48. Kf3 Ra3+ 49. Kg4 Ra4+ 50. Kf3 Ra3+ 1/2-1/2
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "10"]
+[White "Gray, William"]
+[Black "Lazarus, Isaac"]
+[Result "1-0"]
+[ECO "A06"]
+[WhiteElo "1943"]
+[BlackElo "1845"]
+[PlyCount "63"]
+[EventDate "2023.??.??"]
+
+1. Nf3 d5 2. b3 Nc6 3. Bb2 Bf5 4. e3 a6 5. c4 e6 6. a3 Nf6 7. Be2 Be7 8. O-O
+O-O 9. Nh4 Bxb1 10. Rxb1 d4 11. d3 dxe3 12. fxe3 Rb8 13. d4 b5 14. Qc2 Na7 15.
+Rbd1 c6 16. Nf3 Qc8 17. d5 Ng4 18. Ng5 Bxg5 19. Bxg4 f5 20. Bh3 cxd5 21. Bd4
+Nc6 22. Bc5 Be7 23. cxd5 Bxc5 24. Qxc5 Na5 25. Qxc8 Rbxc8 26. dxe6 g6 27. e4
+fxe4 28. e7 Rxf1+ 29. Rxf1 Re8 30. Be6+ Kg7 31. Rf7+ Kh6 32. Bd7 1-0 
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "12"]
+[White "Parsons, Stephen"]
+[Black "Chitta, Adithya"]
+[Result "1/2-1/2"]
+[ECO "A18"]
+[WhiteElo "1780"]
+[BlackElo "1647"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "113"]
+[EventDate "2023.??.??"]
+
+1. c4 Nf6 2. Nc3 e6 3. e4 Nc6 4. d4 Bb4 5. e5 Ne4 6. Qd3 d5 7. Nge2 O-O 8. f3 Nxc3 9. bxc3 Be7 10. Ng3 f6 11. f4 fxe5 12. dxe5 d4 {[#]} 13. Qe4 dxc3 14. Bd3 g6 15. Be3 Nb4 16. Bc2 Nxc2+ 17. Qxc2 Bb4 18. Rd1 Qh4 19. O-O b6 20. Ne4 Bb7 21. Nf6+ Kg7 22. Rd7+ Rf7 23. Rxf7+ Kxf7 24. Qa4 Be7 25. Rd1 Bxf6 26. exf6 Qxf6 27. Bd4 Qe7 28. Bxc3 Rd8 29. Be5 Rxd1+ 30. Qxd1 Qc5+ 31. Kh1 Qc6 32. Qc2 Ke7 33. h4 Ba6 34. h5 Kf7 35. hxg6+ hxg6 36. Qf2 Bb7 37. Qg3 Qe4 38. Qg5 Ke8 39. Bxc7 Qc6 40. Qxg6+ Kd7 41. Be5 Qc5 42. Qf7+ Qe7 43. Qxe7+ Kxe7 44. Bb8 a6 45. Ba7 b5 46. cxb5 axb5 47. Kh2 Kf6 48. g4 b4 49. Bd4+ Kg6 50. Bc5 Bd5 51. Bxb4 Bxa2 52. Kg3 Bb3 53. Kf3 Bd1+ 54. Kg3 Kf6 55. Ba5 Kg6 56. f5+ exf5 57. gxf5+ 1/2-1/2
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "13"]
+[White "Admassu, Yonathan"]
+[Black "Toledo Guerrero, Fernando"]
+[Result "1-0"]
+[ECO "A96"]
+[WhiteElo "1647"]
+[BlackElo "1597"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "111"]
+[EventDate "2023.??.??"]
+
+1. d4 e6 2. c4 f5 3. g3 Nf6 4. Bg2 Be7 5. Nf3 O-O 6. O-O d6 7. Nc3 Ne4 8. Qc2
+Nxc3 9. Qxc3 a5 10. b3 Bf6 11. Bb2 Nc6 12. Rad1 Qe8 13. Qd2 (13. Qe3 $5) 13...
+e5 $1 14. d5 (14. dxe5 $1 dxe5 15. Ne1 $14) 14... Ne7 (14... Nd8 $5 15. e3 b6)
+(14... Nb4 $1 15. a3 Na6 16. Qxa5 f4) 15. Ng5 $2 {[#]} (15. c5 Qh5) (15. e3 Bd7
+(15... Ng6) (15... Qh5)) 15... f4 $2 (15... Bxg5 {*MUST* be taken before it
+lands on e6!} 16. Qxg5 f4 $17 {Now it's just about Black's moving forward on
+the kingside, with no distractions.}) 16. Ne6 $1 Bxe6 17. dxe6 Qh5 $6 (17...
+Qc8 18. e3 fxg3 19. hxg3 a4 (19... Qxe6 20. Bxb7 $16)) 18. Bxb7 Bg5 $6 (18...
+Rab8) (18... Rae8) 19. Qd3 Rab8 20. Be4 Rf6 21. Kg2 Rh6 22. Rh1 (22. h4 $1 {is
+a tactical defense, leading to a trade of queens and a won game:} Bxh4 23. Rh1
+Qg4 24. Qf3 $1 Qxf3+ (24... Qg5 25. Bc1 $1) 25. exf3 $1 Bg5 26. Rxh6 Bxh6 27.
+Bc3 $18) 22... Qh3+ $16 23. Kg1 Rf8 24. Bg2 {Yes, White really did castle on
+move six!} (24. Bc3 $1 $18) 24... Qh5 25. h4 $1 fxg3 {[#]} 26. hxg5 $4 (26.
+fxg3 $18) 26... gxf2+ 27. Kf1 Qxh1+ 28. Bxh1 Rxh1+ 29. Kg2 {[#]} Rxd1 $2 (29...
+f1=Q+ $19) (29... Re1 $1 $19 {by a LOT}) 30. Qxd1 $17 {/} f1=Q+ 31. Qxf1
+Rxf1 32. Kxf1 {[#]} c5 $6 (32... Nc6) (32... Kf8 33. Bc3 Nc6 34. g6 hxg6 35.
+Kg2 Ke7 36. Kh3 Kxe6 37. Kg4 {Black is certainly the better, but White could
+easily end up drawing here.}) 33. Kf2 Kf8 34. Kf3 Nc6 35. Ke4 Ke7 {[#]} 36. Kf5
+$2 (36. Bc3 Kxe6 37. e3 $11) 36... g6+ $2 (36... Nd4+ $1 {wins whether or not
+White takes the knight or loses the e-pawn.} 37. Bxd4 exd4 $19 (37... cxd4 $4
+38. a3 $18)) 37. Ke4 $11 Kxe6 {[#]} 38. e3 $2 (38. a4 $11) (38. Bc3 $11) 38...
+Kd7 $2 $11 (38... Nd8 $1 39. Bc3 Nf7 40. Bxa5 Nxg5+ 41. Kd3 h5 42. Ke2 (42. Bd8
+h4) 42... Ne4 $19 {after ...g5 Black's kingside takes care of itself, while the
+king stops the a-pawn.} 43. Kf3 d5 $1 44. a4 g5 $1 $19 (44... Ng5+ $19)) 39.
+Bc3 Nb4 40. Bxb4 axb4 41. Kd5 $11 Ke7 42. Kc6 $1 Ke6 (42... e4 43. Kd5 Kd7 44.
+Kxe4 Ke6 $11) 43. e4 {(only move for White)} Ke7 44. Kc7 $1 Ke6 $1 {[#]} 45.
+Kd8 $2 (45. Kc6 $11) 45... Kf7 $1 $19 (45... h6 $1 $19) (45... h5 $1 $19) 46.
+Kd7 Kg7 $4 {This loses a result-changing tempo to check!} (46... h5 $1 $19 47.
+gxh6 g5 $1 48. Kxd6 g4 49. Kxe5 g3 50. h7 Kg7 51. Kd5 g2 52. Kxc5 g1=Q+ 53.
+Kxb4 $19 {Yes, White takes all of Black's remaining pawns -- but the queens
+handles the little White guys handily. White can drag it out, but no draw
+(remember, every pawn move starts the 50-move count over again.).}) (46... h6
+$1 $19) 47. Kxd6 h5 48. gxh6+ Kxh6 49. Kxe5 Kg7 50. Ke6 $1 g5 51. Kf5 Kf7 52.
+Kxg5 Ke6 53. Kf4 Kd6 54. e5+ Ke6 55. Ke4 Ke7 56. Kd5 1-0
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "14"]
+[White "Hack, Richard"]
+[Black "Mahooti, James"]
+[Result "0-1"]
+[ECO "A13"]
+[WhiteElo "1518"]
+[BlackElo "1812"]
+[PlyCount "82"]
+[EventDate "2023.??.??"]
+
+1. c4 Nf6 2. g3 e6 3. Bg2 d5 4. Nf3 Be7 5. O-O O-O 6. Qc2 c6 7. d3 Nbd7 8. Nbd2
+Re8 9. b3 b6 10. Bb2 Bb7 11. e4 Nf8 12. e5 N6d7 13. Nd4 a6 14. f4 c5 15. Ne2
+Qc7 16. g4 f6 17. d4 cxd4 18. exf6 Bxf6 19. Qd3 Nc5 20. Qb1 d3 {[#]} 21. Ng3
+Bxb2 22. Qxb2 Ng6 23. b4 dxc4 24. Nxc4 Na4 25. Qb3 Bxg2 26. Kxg2 b5 27. Nd2
+Nxf4+ 28. Kg1 Kh8 29. Rac1 Qb6+ 30. Kh1 Qb7+ 31. Nge4 e5 32. Rf3 Rac8 33. Re1
+Qe7 34. Ng3 Qc7 35. Nge4 Nb6 36. Nc5 Nc4 37. Nxc4 bxc4 38. Qxc4 d2 39. Rd1 Qc6
+40. Qc3 Nd5 41. Rxd2 Nxc3 0-1
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "15"]
+[White "Krayushkin, Igor"]
+[Black "Vandenhoven, Clarke Raymond"]
+[Result "0-1"]
+[ECO "B12"]
+[WhiteElo "1726"]
+[BlackElo "1449"]
+[Annotator "Vandenhoven,Clarke Raymond"]
+[PlyCount "30"]
+[EventDate "2023.??.??"]
+
+1. e4 c6 2. d4 d5 3. e5 c5 4. dxc5 Nc6 {One of the two moves Black has
+available here (other being the immediate e6), but I saw that my opponent had
+handled the opening inaccurately last time they faced it (luckily there are
+many people at the Mechanics who play this c5 Caro Kann), so I went for my
+less-preferred Nc6.} 5. Bb5 e6 {[#]} 6. b4 $6 {Although this succeeds in
+defending the pawn, Black can strike at the pawn and leave White with a
+permanent weakness on b4.} a5 7. c3 axb4 (7... Bd7 {Slightly more accurate,
+forcing White to immediately give up his good LSB to try to keep the pawn (both
+of which are very important because they're either central pawns OR defend a
+central pawn).}) 8. cxb4 Nge7 $6 {[#] White now has time to defend both of his
+pawns!} 9. f4 $2 {White completely lets me off the hook for the opening
+inaccuracies.} (9. Nf3 Bd7 10. Bxc6 Nxc6 11. Bd2 b6 $6 {My plan here was to go
+b6, but White has a powerful resource that I missed from a distance.} (11...
+Be7 $16 {Have to settle for the pretty passive Be7, and White continues to
+maintain his extra pawn.}) 12. b5 $1 {[%csl Gc6]} Na5 13. c6 Bc8 $18 {And White
+keeps his extra pawn and a huge space advantage.}) 9... Bd7 {A move late, but
+it shows up} 10. Bxc6 Nxc6 11. Be3 (11. Bd2 {[%cal Gc6d4,Gb7b6] Although this
+defends the pawn for now, we get an advantage by opening up the queenside.} Nd4
+{Black should start by moving the knight, so that White never has b5 on ...b6.}
+(11... b6 $2 12. b5 Nd4 13. c6 Bc8 {[%cal Gd4b5]} 14. Nc3 $1 $16 (14. a4 $2
+Nxb5 $1)) 12. Nf3 Nxf3+ 13. Qxf3 b6 $15 {[%cal Gb6c5,Gb4c5] Black is a bit
+better thanks to the two bishops (especially in such an open position) and the
+longterm pressure against the isolated a-pawn.}) 11... Nxb4 12. Qb3 $2 {Given
+that hell is about to rain on White's king, he needs to get out of the centre
+NOW!} (12. Nf3 Qa5 13. O-O Bxc5 14. Bxc5 Qxc5+ 15. Kh1 $17 {And Black is
+better, but it's not immediately lost for White.}) 12... Qa5 $19 {Lining up on
+the White king and there's no good way to deal with what's about to happen.}
+13. Bd2 (13. Nf3 Ba4 {Or just winning the Queen on the spot.} (13... Nc2+ 14.
+Kf2 Nxa1 {winning a full rook if White doesn't deal with the double check
+threat.} 15. Qb2 Qxa2)) (13. Nc3 Bxc5 14. Bxc5 Nd3+ {For style points} (14...
+Qxc5 $17 {[%cal Gb4d3,Gc5e3] White's position doesn't make any sense AND we're
+up the pawn.} 15. Nce2 (15. Nge2 Ra3 (15... Nd3+ 16. Kd1 d4 17. Qxb7 {The queen
+isn't even threatening the rook!} dxc3 $1 18. Qxa8+ Ke7 19. Qxh8 Ba4#)) (15.
+Rd1 Ra3 $3 {BANG!}) 15... Ra3 $3 {Bang, but different!})) (13. Nd2 Ba4 {[%cal
+Gb3a3,Gb3c3] And the Queen is lost.} 14. Qb1 Bc2) 13... Bxc5 (13... Ba4 $2 {The
+other move I considered, but it gives White chances with} 14. Bxb4 Bxb3 15.
+Bxa5 Rxa5 16. Nc3 Bxc5 $17 {And Black is only better here}) 14. a3 Qb6
+{Attacking the knight in the corner and putting my queen on a better square.}
+(14... Ba4 $4 {Again I considered this move, but now it leads to a worse
+position!} 15. axb4 Bxb3 16. Rxa5 $1 Rxa5 17. bxa5 $16) 15. Nf3 (15. Ne2 {Only
+move to lose more slowly.} Ba4 16. Qf3 Nc2+ 17. Kf1 Nxa1 $19) 15... Bf2+ {White
+resigns, since the queen hangs no matter where the king goes and/or White gets
+mated.} (15... Bf2+ 16. Kd1 (16. Kf1 Bb5+) (16. Ke2 Bb5+ 17. Qd3 Bxd3+) 16...
+Ba4) 0-1
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "16"]
+[White "Srinivasan, Sivavishnu"]
+[Black "Macnee, Felix"]
+[Result "1-0"]
+[ECO "B28"]
+[WhiteElo "1668"]
+[BlackElo "1692"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "95"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Nf3 a6 3. c4 Nc6 4. d4 cxd4 5. Nxd4 e6 6. a3 Nf6 7. Nc3 Bc5 8. Be3
+Ba7 9. Nxc6 bxc6 10. Bxa7 Rxa7 11. e5 Ng8 12. Qd4 Rb7 13. Ne4 Kf8 14. Nd6 Rc7
+15. Qb6 Ne7 16. c5 g6 17. Bxa6 Bxa6 18. Qxa6 Qb8 19. Qe2 Qb3 20. Qf3 Qxf3 21.
+gxf3 Kg7 22. Kd2 Rb8 23. b4 {[#]} Ra7 24. Kc3 Nd5+ 25. Kb3 Rba8 26. Rhd1 Ra4
+27. Nc4 R8a7 {[#]} 28. Nb6 (28. Na5 R4xa5 29. bxa5 Rxa5 30. a4) 28... R4a6 29.
+Nxd5 exd5 30. a4 Kf8 31. Rd4 Ke7 32. Rf4 h5 33. Rf6 Ra8 34. Ra3 R6a7 35. a5 Rb7
+{[#]} 36. a6 $1 Rb5 37. Ra5 $2 {White had still f2-f4, h2-h4, f4-f5 to make a
+play on the other side} Rxa5 38. bxa5 Rxa6 39. Ka4 Ke8 (39... Ra7 40. h4 (40.
+Rf4 $2 Ke6 $1 $19) (40. f4 h4 41. h3 Ra8) 40... Ra8 41. f4 Rb8 (41... Ra7 $2
+42. f5 gxf5 43. Rxf5 Ke6 44. Rxh5) 42. f5 gxf5 43. Rxf5 Rb1 $11) 40. Rf4 (40.
+f4 Ke7 41. f5 gxf5 42. f4 (42. Rxf5 Ke6 43. Rxh5 d4 $11) 42... Ra8 $1 $11)
+40... Ke7 41. Rb4 Ke6 42. Rb6 {[#]} Ra7 $2 {Sometimes it's as simple as this.}
+(42... Ra8 $1 {(only move)} 43. f4 $1 $11 {(only move? Maybe not - but surely
+simplest way to a draw)} (43. a6 $6 Kxe5 44. Ka5 Kd4 $1 45. Rb7 Kxc5 46. Rxd7
+d4 47. Rxf7 d3 48. Rd7 Kc4 49. Kb6 c5 50. a7 Kc3 51. Kxc5 d2 52. Kb6 $1 $11
+{(Just!)}) 43... d4 44. a6 Kd5 45. Kb4 d3 46. Rb7 d6 $5 (46... Rxa6 47. Rxd7+
+Ke6 48. Rxd3 Kf5 49. Rd4 $11) 47. a7 d2 48. Rd7 $1 Rxa7 $5 49. Rxd6+ Ke4 50.
+Rxd2 Kxf4 51. e6 $1 $11 fxe6 52. Rd6 $11) 43. a6 (43. f4 d4 44. a6) 43... d4
+44. Ka5 Kd5 45. Rb7 Ra8 46. Kb6 (46. Rxd7+ Kxc5 47. a7) 46... d3 (46... d6 47.
+Rd7) 47. Rxd7+ Kc4 48. a7 1-0
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "17"]
+[White "Ross, Max L"]
+[Black "Horde, Nicolas T"]
+[Result "1-0"]
+[ECO "D11"]
+[WhiteElo "1618"]
+[BlackElo "1402"]
+[Annotator "Horde,Nicolas T"]
+[PlyCount "57"]
+[EventDate "2023.??.??"]
+
+1. d4 d5 2. c4 c6 3. Nf3 Nf6 4. g3 Bf5 5. Qb3 Qb6 6. Bg2 e6 7. O-O dxc4 $6 {The
+idea is Bd6. Definitely a very bad move - giving the center for no reason as
+Bd6 is already possible} (7... Be7) (7... Bd6 {Is actually possible, there's no
+fork as Black can exchange queens} 8. c5 Qxb3 9. axb3 Bxb1 10. Rxb1 Bc7) 8.
+Qxc4 Bd6 $2 (8... Nbd7 {Black already needs to be precise to not get
+steamrolled in the center} 9. Nc3 h6 10. Nd2 {White is still better with the
+easier game}) 9. Nc3 Nbd7 10. Nd2 e5 {Preventing e4 but allows the d5 push...}
+(10... Bg6 11. e4 $2 e5 $1) 11. d5 cxd5 (11... O-O 12. dxc6 bxc6 {White is
+still going to win material by force}) 12. Nxd5 Nxd5 13. Qxd5 Rb8 (13... Be6
+{The only move, dropping the b7 pawn but at least Black is still alive and have
+"some" play on the queenside} 14. Qxb7 Qxb7 15. Bxb7 Rb8) 14. Nc4 {I actually
+saw that move then playing Rb8 and I was planning Qc5 and I realized afterwards
+that well, it does not work} Be6 {Everything loses for Black at this point, the
+rest of the game is not that interesting} (14... Qc5 15. Nxd6+) 15. Nxb6 Bxd5
+16. Nxd5 O-O 17. Be3 b6 18. Rfd1 Nc5 19. Nf6+ gxf6 20. Rxd6 Kg7 21. b3 Rbc8 22.
+Rc1 Rc7 23. Bxc5 bxc5 24. Rc4 f5 25. Rd5 f6 26. Rcxc5 Rfc8 27. b4 a5 28. Rxc7+
+Rxc7 29. Rxa5 {Definitely not my best game, I played a bunch of random
+non-sense moves in the opening} 1-0
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "18"]
+[White "Dutter, Frederic"]
+[Black "Hule, Pratyush"]
+[Result "1-0"]
+[ECO "B06"]
+[WhiteElo "1900"]
+[BlackElo "1424"]
+[PlyCount "67"]
+[EventDate "2023.??.??"]
+
+1. e4 g6 2. d4 Bg7 3. Nc3 e6 4. f4 d5 5. e5 Nc6 6. Nf3 Bd7 7. Be3 f6 8. exf6
+Qxf6 9. Ne5 Nxe5 10. fxe5 Qf7 11. Qd2 Ne7 12. Bd3 O-O 13. Rf1 Qe8 14. Rxf8+
+Qxf8 15. O-O-O c6 16. Rf1 Qe8 17. Bh6 Nf5 18. Bxf5 exf5 19. Bxg7 Kxg7 20. Ne2
+Qe7 21. Nf4 Re8 22. Rf3 Bc8 23. Qf2 Kf8 24. h4 c5 25. Nxd5 Qf7 26. Nf6 Rd8 27.
+d5 Rxd5 28. Nxd5 Qxd5 29. Rd3 Qc6 30. Rd6 Qc7 31. Qd2 Ke7 32. Qg5+ Ke8 33. Qf6
+Qe7 34. Qh8+ 1-0
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "19"]
+[White "Moisselin, Simon"]
+[Black "Agdamag, Samuel"]
+[Result "1-0"]
+[ECO "B01"]
+[WhiteElo "1565"]
+[BlackElo "1400"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "77"]
+[EventDate "2023.??.??"]
+
+1. e4 d5 2. exd5 Qxd5 3. Nf3 Bg4 4. Be2 Nf6 5. d4 e6 6. c4 Qd8 7. O-O Be7 8.
+Qb3 Qc8 9. h3 Bxf3 10. Bxf3 c6 11. Nc3 O-O 12. Be3 Nbd7 13. Qc2 Nb6 14. b3 Rd8
+15. Rad1 Bb4 16. Ne4 Nbd7 17. c5 Nxe4 18. Bxe4 Nf6 19. Bg5 Nxe4 20. Bxd8 Nc3
+21. Bg5 Nxd1 22. Rxd1 Ba5 23. Qe2 Bd8 24. Bc1 Qd7 25. Qg4 Qd5 26. h4 Be7 27. h5
+Rd8 28. Bh6 g6 29. hxg6 hxg6 30. Rd2 Bxc5 $4 31. dxc5 Qxd2 32. Bxd2 Rxd2 33. a4
+Rd7 34. Qf4 a6 35. Qb8+ Kg7 36. Qc8 Re7 37. Qd8 Kf6 38. g4 e5 39. g5+ 1-0
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "20"]
+[White "Smets, Ray"]
+[Black "Bhingarkar, Pratyush"]
+[Result "0-1"]
+[ECO "B50"]
+[WhiteElo "1192"]
+[BlackElo "1421"]
+[PlyCount "104"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Nf3 d6 3. b4 cxb4 4. d4 g6 5. a3 bxa3 6. c3 Nf6 7. Bd3 Bg7 8. Nxa3
+O-O 9. O-O Re8 10. Re1 Nbd7 11. Bg5 Nb6 12. h3 Be6 13. Nc2 Qc7 14. Qd2 Nc4 15.
+Qc1 Rec8 16. Na3 Nxa3 17. Rxa3 Bc4 18. Qe3 Bxd3 19. Qxd3 e6 20. Qe3 d5 21. e5
+Nd7 22. Bh6 Nb6 23. Bxg7 Kxg7 24. Qg5 Qd8 25. Qf4 Nc4 26. Ng5 Qe7 27. Ra2 a6
+28. Nf3 h6 29. Nh2 Qg5 30. Qf3 Rc7 31. Ng4 Rac8 32. Nf6 Nb6 33. Re3 Qf5 34.
+Qxf5 gxf5 35. Rg3+ Kh8 36. Ra3 Nd7 37. Nh5 Rc6 38. Rg7 Rf8 39. c4 dxc4 40. Rag3
+c3 41. Nf6 Nxf6 42. exf6 c2 43. Rf3 c1=Q+ 44. Kh2 Rg8 45. Rxf7 Qg5 46. g3 Qg6
+47. Rxb7 Qxf6 48. Rf4 e5 49. dxe5 Qxe5 50. Rh4 Rgg6 51. Ra7 Rc2 52. Kg2 Qxg3+
+0-1
+
+[Event "2023 Spring TNM: 1600-1999"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "21"]
+[White "Casares, Nick Jr"]
+[Black "Rex, Tobiah"]
+[Result "0-1"]
+[ECO "C33"]
+[WhiteElo "1600"]
+[BlackElo "1556"]
+[PlyCount "76"]
+[EventDate "2023.??.??"]
+
+1. e4 e5 2. f4 exf4 3. Bc4 Qh4+ 4. Kf1 Nf6 5. Nc3 Bc5 6. d4 Ng4 7. Nh3 Bb6 8.
+Bxf4 O-O 9. Bg3 Qf6+ 10. Ke2 d6 11. Rf1 Qxd4 12. Qxd4 Bxd4 13. Nd5 Ne5 14. Ne7+
+Kh8 15. Bxe5 Bg4+ 16. Kd2 Bxe5 17. Ng5 Bf6 18. Nxf7+ Rxf7 19. Bxf7 Bxe7 20. c3
+Nc6 21. Bb3 Bg5+ 22. Kc2 Ne5 23. h3 Be2 24. Rf2 Bd3+ 25. Kd1 Be3 26. Rf3 Nxf3
+27. gxf3 Rf8 28. Bc2 Bxc2+ 29. Kxc2 Rxf3 30. h4 Bf4 31. Re1 h5 32. Kb3 Bg3 33.
+Rg1 g5 34. hxg5 h4 35. e5 Bxe5 36. Rg4 Rf4 37. Rg2 h3 38. Rg1 h2 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "22"]
+[White "Cooper, Lee"]
+[Black "Karwat, Joseph"]
+[Result "1-0"]
+[ECO "E43"]
+[WhiteElo "1567"]
+[BlackElo "1408"]
+[PlyCount "81"]
+[EventDate "2023.??.??"]
+
+1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 O-O 5. e3 b6 6. Bd3 Bb7 7. O-O Bxc3 8.
+bxc3 d6 9. Qc2 h6 10. e4 Nbd7 11. Re1 e5 12. Rb1 Re8 13. Ba3 c5 14. Nd2 Qc7 15.
+Re3 Nf8 16. Nf1 Ne6 17. Bb2 Nf4 18. Ng3 Kh7 19. f3 Rad8 20. Ree1 Bc8 21. Bc1 g6
+22. Bxf4 exf4 23. Ne2 Nh5 24. Qd2 g5 25. Bc2 Ng7 26. Nc1 Kh8 27. Nd3 f5 28. Nf2
+Qf7 29. Qe2 Ba6 30. Bd3 {[#]} d5 31. cxd5 Bxd3 32. Qxd3 fxe4 33. fxe4 Qe7 34.
+Kf1 cxd4 35. c4 Rc8 36. e5 Qc7 37. Qxd4 Nf5 38. Qd3 Ne3+ 39. Kg1 Qxe5 40. Ng4
+Qe4 41. Qc3+ 1-0
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "23"]
+[White "Starr, Albert Martin"]
+[Black "Barreyro, Romeo Belmes"]
+[Result "0-1"]
+[ECO "A00"]
+[WhiteElo "1500"]
+[BlackElo "1516"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "86"]
+[EventDate "2023.??.??"]
+
+1. b4 a5 2. b5 d5 3. a4 e5 4. Bb2 Bd6 5. Nf3 Qe7 6. e3 Nf6 7. Be2 O-O 8. O-O
+Bg4 9. Nd4 Bd7 10. Nf3 c5 11. d4 {[#]} exd4 12. exd4 c4 13. Re1 Qd8 14. Nbd2 h6
+15. h3 Bf5 16. Ba3 Bxa3 17. Rxa3 Qd6 18. Re3 Nbd7 19. c3 Rae8 20. Bf1 Rxe3 21.
+Rxe3 Nb6 {[#]} 22. Ne5 Qa3 23. Nb1 Bxb1 24. Qxb1 Nxa4 25. Qe1 Qb3 26. Ng4 Nxg4
+27. hxg4 Qxb5 28. g3 Nb6 29. Bg2 a4 30. Re7 Nd7 31. Qc1 Nf6 32. g5 hxg5 33.
+Qxg5 a3 34. Qc1 a2 {[#]} 35. Re1 Re8 36. Rd1 Re2 37. Bf3 Rb2 38. Kg2 Rb1 39.
+Qa3 Rxd1 40. Qxa2 Re1 41. Qd2 Qb1 42. Kh3 Ne4 43. Bxe4 Qxe4 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "24"]
+[White "Tam, Hoa Long"]
+[Black "Marvin, Hayes Alexander"]
+[Result "0-1"]
+[ECO "B22"]
+[WhiteElo "1460"]
+[BlackElo "1310"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "60"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. c3 Nf6 3. e5 Nd5 4. d4 e6 (4... cxd4 5. cxd4 (5. Nf3) (5. Qxd4 e6)
+5... d6) 5. Nf3 (5. c4 $5 {& 6.d5}) 5... b6 (5... cxd4 $1) 6. c4 Nc7 7. d5 d6
+8. Nc3 dxe5 9. Nxe5 {[#]} (9. Bg5 $5 f6 (9... Be7 10. Bxe7 Qxe7 11. d6) 10.
+Nxe5 $1 {A stock combinational motif in quite a few situations, both e-pawn and
+d-pawn openings.} fxg5 11. Qh5+ $1 g6 (11... Ke7 12. Qf7+ (12. Ne4 $18) 12...
+Kd6 13. O-O-O $18) 12. Qf3 $1 (12. Nxg6 hxg6 13. Qxh8 exd5 $16) 12... Qe7 13.
+d6 $1 Qg7 14. dxc7 $16 Qxe5+ 15. Be2 Qxc7 16. Qxa8 a6 17. Qe4 $16) 9... exd5 $6
+(9... Bd6 10. Qa4+ $1 Bd7 (10... Nd7 $2 11. Nc6 Qh4 12. g3 Qg4 13. Be2 $18) 11.
+Nxd7 Qxd7 12. Qc2 $14) 10. cxd5 $16 Bd6 11. Nc4 O-O 12. Be2 (12. Nxd6 $1 Qxd6
+13. Qf3) 12... Re8 13. O-O Bb7 (13... Ba6 $14) (13... Be7 $2 14. d6) 14. Bf3 $6
+$14 Ba6 $1 15. Nxd6 (15. Bg5 $5) 15... Qxd6 16. Ne4 Rxe4 17. Bxe4 Bxf1 18. Kxf1
+Nd7 19. g3 Re8 20. Bf4 Ne5 {[#]} 21. Qc2 $6 (21. Qa4 $16) 21... h6 22. Re1 $6
+(22. h4 $14) 22... g5 23. Bxe5 Rxe5 $15 24. Rd1 $2 (24. Qc3) 24... Nb5 {[#]}
+(24... Nxd5 $1) 25. b4 $6 cxb4 26. Qc8+ Kg7 27. Bg2 Nc3 28. Rd2 Nxd5 29. Kg1
+Re1+ 30. Bf1 {[#]} Ne3 $1 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "25"]
+[White "Levin, Adam"]
+[Black "Galvin, Connor"]
+[Result "0-1"]
+[ECO "B30"]
+[WhiteElo "1114"]
+[BlackElo "1590"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "50"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Bc4 Nc6 3. Nf3 e6 4. O-O d5 5. exd5 exd5 6. Bb3 Nf6 7. d3 Be7 8. h3
+O-O 9. Bf4 b5 10. c3 Bb7 11. d4 Qb6 12. Ne5 c4 13. Bc2 Nxe5 14. Bxe5 Ne4 15.
+Nd2 Bd6 16. Nxe4 dxe4 17. Bxd6 Qxd6 18. Qh5 a6 19. Rfe1 f5 20. g4 Qf4 21. Re3
+fxg4 22. Rf1 Rf5 23. Qh4 Raf8 24. Rg3 Qd2 25. Qxg4 R8f7 {A bit surprising to
+resign right now, but it just takes a move or two to see that Black is indeed
+lost!} (25... R8f7 26. Bxe4 (26. Bd1 Rxf2) 26... Rf4) 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "26"]
+[White "Toczyski, David Paul"]
+[Black "Brown, Nicholas M"]
+[Result "1/2-1/2"]
+[ECO "B66"]
+[WhiteElo "1081"]
+[BlackElo "1480"]
+[PlyCount "76"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 a6 5. Nc3 Nf6 6. Bg5 e6 7. Qd2 Be7 8. f4
+d6 9. O-O-O O-O 10. Nxc6 bxc6 11. e5 Nd5 12. Bxe7 Qxe7 13. exd6 Qxd6 14. g3 Rd8
+15. Ne4 Qd7 16. Bg2 Bb7 17. Nc5 Qe7 18. Nxb7 Qxb7 19. c4 Rdc8 20. cxd5 cxd5+
+21. Kb1 Rab8 22. Rc1 Rd8 23. Rc3 a5 24. Rb3 Qe7 25. Rxb8 Rxb8 26. Qxa5 Qf6 27.
+Qd2 d4 28. Re1 d3 29. Re3 Qd4 30. Rxd3 Rxb2+ 31. Qxb2 Qxd3+ 32. Kc1 Qe3+ 33.
+Kd1 Qg1+ 34. Kc2 Qxg2+ 35. Kb3 Qb7+ 36. Kc2 Qg2+ 37. Kb1 Qf1+ 38. Qc1 Qd3+
+1/2-1/2
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "27"]
+[White "Chei, Morsy"]
+[Black "James, Charles"]
+[Result "1-0"]
+[ECO "B21"]
+[BlackElo "1356"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "69"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Bc4 d6 3. f4 e6 4. Nf3 a6 5. d3 Nc6 6. a3 Nge7 7. Nc3 g6 8. O-O Bg7
+9. Ne2 d5 10. exd5 exd5 (10... Nxd5) 11. Ba2 Qb6 (11... O-O) 12. c3 O-O 13. Ng3
+Be6 $11 14. Nh4 f5 15. Nf3 Rad8 16. Kh1 Rd6 17. Ng5 Bd7 (17... Re8) 18. Nh5 $4
+gxh5 19. Qxh5 Rh6 (19... h6) 20. Qf3 Kh8 (20... Nd8 21. Bxd5+ Nxd5 22. Qxd5+
+Be6) 21. Bxd5 Nxd5 22. Qxd5 Be8 23. Re1 Qd8 24. Qa2 Rff6 (24... Qd7) 25. Bd2
+Qd7 26. Re3 Bf7 27. Qb1 b5 28. Qe1 Be6 29. Qe2 Nd8 30. Re1 Qd6 31. Qf3 Rfg6
+(31... Bg8) 32. g3 Qc6 $4 (32... Bd5 $18 33. Ne4 (33. Re8+ Bf8 34. Rxf8+ Rg8
+(34... Qxf8) (34... Kg7) 35. Rxg8+ Kxg8 36. Nf7 Kxf7)) 33. Qxc6 $18 Nxc6 34.
+Rxe6 Rxe6 (34... Bf8 35. Nf7+) 35. Nf7+ 1-0
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "28"]
+[White "Clark, Drew H"]
+[Black "Nolen, Sam"]
+[Result "0-1"]
+[ECO "B12"]
+[WhiteElo "1319"]
+[BlackElo "1011"]
+[Annotator "Nolen,Sam"]
+[PlyCount "70"]
+[EventDate "2023.??.??"]
+
+1. e4 c6 2. d4 d5 3. e5 Bf5 4. h4 h5 5. Bg5 Qb6 6. Bd3 Qxb2 $2 {Of course my
+opponent expected Bxd3. Instead I used twenty minutes to play this well-known
+mistake, deciding to take my chances with a material advantage. However, the
+other unusual move I considered, Qxd4, was actually sound.} (6... Qxd4 $5 {and
+White cannot play 7. Bxf5 due to 7... Qxe5+} 7. Nf3 Qg4 $1 {and Black is just
+fine.}) 7. Bxf5 $1 e6 $6 {I decided 7. Qxa1 8. e6 was too ugly, and indeed this
+is the reason I should not have played Qxb2. However, Black is better off
+staying committed and taking the rook. White is only slightly better after a
+line like the following (although it is very hard to play for Black).} (7...
+Qxa1 8. e6 g6 9. Bd3 f6 10. Bxg6+ Kd8 11. Bf4) 8. Bxe6 $2 (8. Nd2 {is correct
+to save the rook and I had actually miscalculated this move as the reply to
+6... Qxb2.}) 8... Qxa1 9. Bc8 $2 {This results in a forced trade to Black's
+advantage. After 9... Nd7, White cannot play 10. Bxb7? due to 10... Rb8 11.
+Ba6? Rxb1!, winning the queen for a rook.} (9. Bh3 {gives a very interesting
+game! Black has won an exchange but White has an excellently positioned pair of
+bishops.}) 9... Nd7 10. Bxd7+ Kxd7 11. Ne2 Qxa2 12. O-O Be7 (12... f6 13. Bf4
+(13. exf6 $2 Nxf6)) 13. Nbc3 Qa5 14. Qd2 Qd8 15. e6+ $2 {With an idea to stop
+f6, but not a sound pawn sacrifice. Black's material advantage is threatening
+to become decisive.} fxe6 16. f4 $2 {Creating long-term problems. White's king
+is now potentially exposed on the diagonal and there is a weakness on g4. Black
+can still trade the bishops at any time.} Nf6 17. Qe3 Ng4 18. Qh3 Rf8 19. Rb1
+b6 20. Qd3 Qe8 21. Qa6 Qc8 22. Qd3 Qe8 23. Qa6 Kc7 24. Nb5+ $2 {In what
+followed it looked like there might be chances for White to win a rook and get
+back in the game. However, ultimately this sacrifice does not yield a decisive
+attack.} cxb5 25. Nc3 Qc8 26. Nxb5+ Kd7 27. Qa4 Kd8 28. Rb3 Qd7 $2 {Possibly
+fatigue was telling here. Otherwise I cannot explain why I did not see the
+obvious and crushing move Qxc2 after which White must work hard not to give up
+any more than the knight.} (28... Qxc2 29. Bxe7+ Kxe7 30. Qa3+ Kf7 31. Rf3 Qb1+
+32. Rf1 Qxb5) 29. Qa6 Bxg5 30. fxg5 Ke7 31. Qa3+ Kf7 32. Qc1 Kg8 33. c4 a6 34.
+Nc3 dxc4 35. d5 cxb3 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "29"]
+[White "Sisti, Daniel J"]
+[Black "Fitzgerald, William"]
+[Result "1/2-1/2"]
+[ECO "B01"]
+[WhiteElo "1276"]
+[BlackElo "938"]
+[PlyCount "75"]
+[EventDate "2023.??.??"]
+
+1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8 4. d4 Nf6 5. Nf3 Bg4 6. Bc4 e6 7. h3 Bxf3 8.
+gxf3 c6 9. Be3 Nbd7 10. Qd3 b5 11. Bb3 Nb6 12. O-O-O Nbd5 13. Bg5 Be7 14. h4
+Qd7 15. Ne4 h6 16. Nxf6+ Nxf6 17. Bf4 Bd6 18. Bg3 Nh5 19. Bxd6 Qxd6 20. Kb1 Nf4
+21. Qe4 Rd8 22. Rhg1 c5 23. c3 c4 24. Bc2 Nh3 25. Qg4 Nxg1 26. Qxg7 Qf8 27.
+Qxg1 Rg8 28. Qh2 Qd6 29. Qh1 Qf4 30. a3 Rd5 31. Be4 Rh5 32. Rg1 Rxg1+ 33. Qxg1
+Rxh4 34. Bc6+ Ke7 35. Qg8 Rh1+ 36. Ka2 Qc1 37. Qe8+ Kf6 38. Qh8+ 1/2-1/2
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "30"]
+[White "Gay, John"]
+[Black "Sharan, Shubhankar"]
+[Result "1-0"]
+[ECO "B19"]
+[BlackElo "1186"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "65"]
+[EventDate "2023.??.??"]
+
+1. e4 c6 2. d4 d5 3. Nc3 dxe4 4. Nxe4 Bf5 5. Ng3 Bg6 6. Nf3 e6 (6... Nd7) 7. h4
+h6 8. h5 (8. Ne5 $5 Bh7 9. Bd3 Bxd3 10. Qxd3 Nd7 11. f4) 8... Bh7 9. Bd3 Bxd3
+10. Qxd3 Nd7 11. O-O (11. Bf4) (11. Bd2) 11... Ne7 $6 (11... Ngf6 {(...Bd6,
+xh5)} 12. Bf4 Nd5) 12. c4 Qc7 13. Re1 Rb8 14. d5 cxd5 15. cxd5 Nxd5 16. Qxd5
+Nf6 17. Qb5+ Nd7 18. Ne5 Rd8 19. Nxd7 Rxd7 20. Be3 a6 21. Qa4 Be7 22. Rac1 Qd8
+23. Red1 b5 24. Rxd7 Qxd7 25. Qg4 Bf6 26. b3 Ke7 27. Bc5+ Ke8 28. Rd1 Qc7 29.
+b4 Bg5 30. Qf3 Be7 31. Qa8+ Bd8 32. Ne4 f5 33. Nd6+ 1-0
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "31"]
+[White "Blum, Paul"]
+[Black "Yamamoto, Craig"]
+[Result "1-0"]
+[ECO "B40"]
+[WhiteElo "1033"]
+[BlackElo "1500"]
+[PlyCount "65"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Nf3 e6 3. c4 Nc6 4. Nc3 a6 5. d3 e5 6. Be3 Nd4 7. Nxe5 Ne6 8. Qf3
+f6 9. Qh5+ Ke7 10. Nd5+ Kd6 11. Nf7+ Kc6 12. Nxd8+ Nxd8 13. Nc3 Ne6 14. Qd5+
+Kc7 15. O-O-O Ne7 16. Bf4+ Nxf4 17. Qxc5+ Kd8 18. Qe3 Ne6 19. g3 Nc6 20. Bh3
+Be7 21. Nd5 Bd6 22. Qb6+ Ke8 23. Bxe6 dxe6 24. Nc7+ Bxc7 25. Qxc7 Ne7 26. d4
+Kf7 27. d5 exd5 28. cxd5 Ke8 29. d6 Nc6 30. d7+ Bxd7 31. Rxd7 Rb8 32. Rxg7 Rd8
+33. Qf7# 1-0
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "32"]
+[White "Chan, John"]
+[Black "Brickhouse, Christian"]
+[Result "1-0"]
+[ECO "D37"]
+[WhiteElo "1500"]
+[BlackElo "1238"]
+[Annotator "Brickhouse,Christian/Winslow,Elliott"]
+[PlyCount "105"]
+[EventDate "2023.??.??"]
+
+1. c4 Nf6 2. Nc3 d5 3. d4 (3. cxd5 Nxd5 4. e4 Nxc3 5. bxc3 g6 6. d4 Bg7 {and we
+transpose to an Exchange Gruenfeld.}) ({(ew):} 3. cxd5 Nxd5 4. g3 {putting
+pressure on the center before occupying it.}) 3... e6 4. Nf3 Nbd7 (4... dxc4 $5
+5. e4 Bb4 6. Bg5 (6. e5 $5 Nd5 7. Bd2)) 5. c5 Be7 $146 (5... c6 6. Bf4 Nh5 7.
+e3 Nxf4 8. exf4 g6 9. h4 {[%emt 0:00:12] Guichard - Alexieva, 1-0, TCh-FRA Top
+2021} (9. Bd3 $6 {Unuk-Rozum, 0-1, European Hybrid Qual 2021})) (5... b6 6. b4
+(6. c6 $2 Nb8 {wins the pawn.}) 6... a5 7. c6 axb4 8. cxd7+ Bxd7 9. Nb1 {Black
+leads in development.}) 6. Bf4 O-O 7. Nb5 e5 (7... Ne8 $5 8. e3 c6 9. Nc3
+{Black has repelled the attack.}) 8. dxe5 Nh5 9. Be3 Nxc5 10. g3 c6 11. Nc3 f6
+{Black needs to find a way to rescue his h5 knight, but the e5 pawn is
+preventing that. f6 attacks the e pawn creating an escape for the knight.} 12.
+Bg2 (12. exf6 Nxf6 {Knight escapes}) (12. e6 Bxe6 13. Nd4 Bd7 14. Bg2 f5 15.
+O-O Nf6 {Knight escapes.}) 12... fxe5 13. Nxe5 Qd6 14. Nf3 Nf6 15. O-O Kh8 16.
+Qc2 Nfe4 $6 (16... Ng4 $5 17. Bd4 Bf5 18. Qd2 Rae8 $15 {Black has more piece
+activity.}) 17. Bf4 Qd8 18. Rad1 Bf5 19. Qc1 Nxc3 20. bxc3 Qa5 (20... b5
+{mobilize the pawns sooner.}) (20... Ne6 {put the knight behind the pawns.})
+21. Qb2 Bf6 22. Nd4 Bg6 23. Bd6 Rfe8 24. Rc1 Ne4 25. Bxe4 Bxe4 26. a3 Rad8
+(26... Qd8 $5 {bring the queen behind the pawns to prep for queen side
+advance.} 27. Bf4 c5 28. Nf3 (28. Nb5 Qb6 29. Bc7 Qc6) 28... b6) 27. Bf4 c5 28.
+Nb5 Rd7 29. Nd6 Ree7 30. Qb3 c4 31. Qb2 d4 $2 32. Nxe4 (32. cxd4 $1 {simply
+loses two pawns after} Bc6 (32... c3 $4 {was my intended continuation with} 33.
+Rxc3 Bxd4 {but missed} 34. Rc8+ Rd8 $18 {and White is winning the bishop.}) 33.
+Rxc4 $16) 32... Rxe4 33. Qc2 Re8 (33... d3 $1 34. exd3 cxd3 35. Qd2 $17 {Black
+has a passed pawn on the 3rd rank.}) 34. cxd4 Rxd4 35. Be3 Rde4 36. Rb1 b5 37.
+Rfd1 a6 38. Rd5 $2 Qxa3 39. Rbd1 Qe7 $6 {Black has a 3 on 0 and should be
+trying to trade pieces, not triple stack on the e-file (which isn't even
+open!)} (39... Qb3) (39... Rxe3 $5 40. fxe3 Qxe3+ 41. Kg2 {and Black argues
+that the 3-on-0 is sufficient compensation for being down the exchange.}) 40.
+Rd7 Qe5 $2 41. R1d5 Qa1+ 42. Kg2 R4e6 $4 {Black's position is mostly fine, and
+the a6 pawn is adequately defended by the queen. Black should instead work to
+get the King out of the corner. Instead, he overprotects the a6 pawn and
+unleashes White's queen which proves to be the fatal mistake of the game.}
+(42... Kg8 $1) 43. Rh5 $1 Re4 44. f3 Qb2 45. Qxb2 Bxb2 46. fxe4 c3 47. Bd4 Rg8
+48. Rd6 Re8 49. Rxa6 b4 50. Ra7 Rg8 51. Rb7 Ba3 52. Rc7 {Black's queen side is
+about to fall and his defense in the corner is being swarmed. The situation is
+quite hopeless.} h6 53. Rxh6# 1-0
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "33"]
+[White "Ell, Adeline Christiana"]
+[Black "Aher, Sandesh"]
+[Result "0-1"]
+[ECO "E07"]
+[WhiteElo "277"]
+[BlackElo "1328"]
+[PlyCount "132"]
+[EventDate "2023.??.??"]
+
+1. Nf3 Nf6 2. g3 e6 3. Bg2 d5 4. d4 Be7 5. O-O O-O 6. c4 c6 7. Nc3 Nbd7 8. h3
+Re8 9. Bf4 Nf8 10. g4 Ng6 11. Bg3 Bd6 12. Ne5 Bc7 13. Re1 dxc4 14. e4 Nxe5 15.
+dxe5 Nd7 16. f4 Bb6+ 17. Kh1 Ba5 18. g5 Nf8 19. Qg4 Bd7 20. Rad1 Qc8 21. Rf1
+Ng6 22. h4 Bb4 23. h5 Nh8 24. h6 g6 25. Ne2 Bf8 26. Nd4 c5 27. Nf3 a5 28. Nh4
+Ra6 29. f5 exf5 30. exf5 b5 31. Bd5 Bc6 32. Kh2 Bxd5 33. Rxd5 Rb6 34. Qf4 gxf5
+35. Nxf5 Ng6 36. Qe4 Qe6 37. Nh4 Nxh4 38. Bxh4 Qg6 39. Qf4 Rbe6 40. Rd7 R8e7
+41. Rd5 Re8 42. Bg3 Qh5+ 43. Kg2 Qg6 44. Qf5 Qxf5 45. Rxf5 Rg6 46. Rd7 Re7 47.
+Rd2 Re8 48. Re2 Rge6 49. Ref2 R8e7 50. Rf6 Rxf6 51. exf6 Re6 52. Kh3 Bd6 53.
+Bh4 Kf8 54. Rf3 Re2 55. Rf2 Rxf2 56. Bxf2 Ke8 57. Kg4 Kd7 58. Be1 Ke6 59. Bxa5
+Be5 60. b3 c3 61. a3 c2 62. Bd2 Bb2 63. a4 c1=Q 64. Bxc1 Bxc1 65. axb5 Be3 66.
+b6 Kd6 {( ... )} 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "34"]
+[White "Singer, Andrew"]
+[Black "Baker-Williams, Tyler"]
+[Result "0-1"]
+[ECO "B08"]
+[WhiteElo "1274"]
+[PlyCount "58"]
+[EventDate "2023.??.??"]
+
+1. e4 d6 2. d4 Nf6 3. Nc3 g6 4. Nf3 Bg7 5. Bc4 O-O 6. O-O Nxe4 7. Be3 Nxc3 8.
+bxc3 Bg4 9. h3 Bxf3 10. Qxf3 c6 11. Rfe1 Nd7 12. Rad1 d5 13. Bb3 e5 14. c4 e4
+15. Qe2 Nf6 16. cxd5 Nxd5 17. Qd2 Kh8 18. Bh6 f5 19. c4 Bxh6 20. Qxh6 Nf6 21.
+Re3 Nh5 22. g4 fxg4 23. hxg4 Qh4 24. Rd2 Qxg4+ 25. Kf1 Ng3+ 26. Rxg3 Qxg3 27.
+Re2 Rae8 28. d5 e3 29. Qxe3 Rxe3 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "36"]
+[White "Myers, Steven Lee"]
+[Black "Chanoff, Eli Kleiner"]
+[Result "0-1"]
+[ECO "B12"]
+[WhiteElo "979"]
+[BlackElo "1210"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "80"]
+[EventDate "2023.??.??"]
+
+1. e4 c6 2. d4 d5 3. e5 c5 4. Nf3 cxd4 5. Nxd4 Nc6 6. Bb5 Bd7 7. Nxc6 bxc6 8.
+Bd3 e6 9. Be3 Ne7 10. c4 dxc4 11. Bxc4 Qa5+ 12. Nc3 Qxe5 13. O-O Nf5 14. Re1
+Bd6 15. g3 Qa5 16. Bd3 Nxe3 17. Rxe3 Bc5 18. Rf3 Rd8 19. a3 Be7 20. Qc2 Qh5 21.
+Be2 O-O 22. Rd1 e5 {[#]} 23. Rxd7 Rxd7 24. Rd3 Qg6 25. Qd2 Rxd3 26. Qxd3 Qxd3
+27. Bxd3 f5 28. Bc4+ Kh8 29. b3 Bxa3 30. Ne2 Rd8 31. Kg2 Bc5 32. f4 e4 33. Kh3
+g6 34. Kh4 Rd2 35. Kg5 Be7+ 36. Kh6 a5 37. h4 Rc2 38. Ba6 c5 39. Bb5 Bf8+ 40.
+Kg5 Kg7 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "37"]
+[White "Ahearn, Matthew"]
+[Black "Cao, Danny Du Uy"]
+[Result "1-0"]
+[ECO "B30"]
+[WhiteElo "819"]
+[BlackElo "1112"]
+[Annotator "Cao,Danny Du Uy"]
+[PlyCount "75"]
+[EventDate "2023.??.??"]
+
+1. e4 c5 2. Nc3 e6 (2... Nc6 3. Bb5 Nd4) 3. Nf3 Nc6 4. Bc4 Nf6 5. d3 d5 6. Bb5
+a6 (6... Bd7 7. e5 Nxe5 8. Nxe5 Bxb5 9. Nxb5 Qa5+ 10. Nc3 d4) (6... Qc7) 7.
+Bxc6+ bxc6 8. Bg5 Be7 9. e5 Nd7 10. h4 h6 11. Bxe7 Qxe7 12. Qe2 O-O 13. g4 f6
+14. O-O-O d4 (14... fxe5 15. Nxe5 Nxe5 16. Qxe5) (14... a5) 15. Ne4 fxe5 (15...
+f5 16. gxf5 exf5 17. Nd6) 16. g5 Qf7 17. Nfd2 Qf4 18. gxh6 Qxh6 19. Ng5 a5 20.
+Rdg1 Rf4 21. Rg4 Rxg4 22. Qxg4 Nf6 23. Qg3 Nd7 24. Rg1 Qf6 25. Nxe6 g6 (25...
+Qxe6 26. Qxg7#) 26. Qh3 (26. Qxg6+ Qxg6 27. Rxg6+ Kf7 28. Rh6) 26... Nf8 27.
+Ne4 Qxe6 (27... Bxe6 28. Nxf6+ Kf7) 28. Qf3 Qf5 (28... Bd7 29. Nxc5) 29. Nf6+
+Kf7 (29... Kh8 30. Qxc6 Qxf2) 30. Qxc6 Ra6 (30... Qf4+ 31. Kb1) (30... Qxf2 31.
+Qe8+ (31. Rd1) 31... Kxf6 32. Qc6+) 31. Qe8+ Kxf6 32. Qxf8+ Ke6 33. Qxc8+ Kd5
+34. Qxa6 Qf4+ 35. Kb1 Qh2 36. Qb7+ Ke6 (36... Kd6 37. Rxg6#) 37. Rxg6+ Kf5 38.
+Qf7# 1-0
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "38"]
+[White "McCutcheon, Bennett"]
+[Black "Pirone, John"]
+[Result "1-0"]
+[ECO "C54"]
+[WhiteElo "1108"]
+[BlackElo "533"]
+[PlyCount "49"]
+[EventDate "2023.??.??"]
+
+1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 d5 6. exd5 Na5 7. dxc5 Nxc4 8.
+Qa4+ c6 9. dxc6 O-O 10. Qxc4 Qe7 11. O-O bxc6 12. Bg5 Be6 13. Bxf6 Qxf6 14. Qh4
+Qf5 15. Nbd2 Qd3 16. Qe4 Qb5 17. Ng5 g6 18. Nxe6 fxe6 19. Qxe5 Rae8 20. Ne4 Re7
+21. Nf6+ Kf7 22. Nxh7 Rd8 23. Qf6+ Ke8 24. Qf8+ Kd7 25. Rad1+ 1-0
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "39"]
+[White "Le, Thu"]
+[Black "Hollon, Nick"]
+[Result "0-1"]
+[ECO "E06"]
+[WhiteElo "103"]
+[BlackElo "1074"]
+[Annotator "Le,Thu"]
+[PlyCount "118"]
+[EventDate "2023.??.??"]
+
+1. d4 d5 2. c4 c6 3. g3 Nf6 4. Bg2 e6 5. Nf3 Be7 6. O-O dxc4 $6 7. Qc2 $6 (7.
+Ne5 {I was debating whether to go into Qc2 or Ne5 mainline. Ne5 would have
+prevented b5 else Black loses an exchange.} b5 (7... O-O) 8. Nxc6 Nxc6 9. Bxc6+
+Bd7 10. Bxa8) 7... b5 8. a4 $6 (8. Nbd2) 8... Bb7 $6 9. b3 $6 {Decided on the
+gambit line so that Black gets isolated pawns and White gets more space in the
+center} (9. Nbd2) 9... cxb3 10. Qxb3 b4 {Missed that there's a Bishop on e7}
+11. Nbd2 O-O 12. Re1 $2 {Preparing to push e4 and let the d2 Knight come to c4}
+(12. a5 {Could have gone a5 here to prevent Black going a5 and get connected
+pawns. The Bishop would be stuck on e7 forever or Black would have to give the
+pawn back}) 12... a5 $6 13. e4 $2 Qc7 14. Bb2 $6 (14. Nc4 c5 15. Bf4 {Another
+way to develop. which White gains a tempo.}) 14... Nbd7 15. Rac1 Rfe8 $6 16.
+Qc2 $2 (16. e5 {I considered this variation but thought I'd rather deny Black's
+Knight the d5 square. The e4 pawn has strong protection.} Nd5 17. Ne4 Rac8)
+16... Rac8 $6 17. Nc4 $6 (17. Nb3 {Didn't like the resulting position of this
+variation} c5 18. dxc5 $6 Nxc5 19. Nxc5 Bxc5) 17... c5 18. Nfe5 $2 {Bad trade.
+I missed Black's Nf6 to Nd7. Thought my Knight could hang around on e5} (18.
+Nfd2 cxd4 19. Bxd4 $6) 18... Nxe5 19. Nxe5 Nd7 20. Nxd7 Qxd7 21. dxc5 Rxc5 22.
+Qd1 $6 Qxd1 23. Rcxd1 {Didn't want to trade more since I'm already down a pawn
+and Black has a passed pawn. But allowing Black with 2 Rooks on the board
+created more complications} (23. Rexd1) 23... Bc6 24. Ra1 (24. Rc1 Rxc1 25.
+Rxc1 Bxa4 $6 26. Ra1 {Missed this fork.}) 24... Rc2 25. Bd4 Rb8 26. e5 {Trading
+the LSB to relieve pressure on a4} Bxg2 27. Kxg2 b3 28. Reb1 {I did not like
+this move later on because Ra1 is denied of mobility} (28. Re3 Rc4 29. Bb2)
+28... Rb4 29. Bb2 Bc5 30. Ra3 (30. Ba3 Rxa4 31. Rxb3 {Missed this.} (31. Bxc5
+$6 Rxa1 32. Rxa1 Rxc5 {I saw this variation and decided to go Ra3 instead of
+Ba3})) 30... Rxf2+ 31. Kh3 Rf3 32. Rc1 Rh4+ $4 {My opponent told me he forgot
+the King could take...} 33. Kxh4 Bxa3 34. Bxa3 f6 35. Rc8+ (35. Kg4 Re3 36.
+exf6 (36. Rc5 Kf7 37. Rxa5) 36... gxf6) 35... Kf7 36. Rf8+ Kg6 37. exf6 gxf6
+38. Ra8 $6 Rf2 39. Rg8+ Kf5 40. g4+ $2 Kf4 41. Bc1+ {I was down to 2-3 minutes
+left and was trying very hard to somehow lure my opponent into a checkmate, but
+that failed.} (41. h3 b2 42. Rb8 {White wouldn't have to sac the Bishop here}
+b1=Q 43. Rxb1 Ra2 44. Bc1+ {Now this works.}) 41... Kf3 42. h3 b2 43. Bxb2 $1
+Rxb2 44. Kh5 $2 {And the endgame blunderfest begins...} (44. Rf8) 44... f5
+(44... Rh2 {Black would have won the game right here - either winning the h3
+pawn or M4.} 45. Kh4 (45. h4 Kg3) (45. Kh6 Rxh3+) 45... Kg2 46. g5 f5) 45. gxf5
+exf5 46. Rf8 $2 (46. Rg5 {forking both the f5 and a5 pawns}) 46... Rb4 $4
+(46... f4 {[%eval -594,0]}) 47. Rxf5+ Rf4 48. Rxf4+ Kxf4 49. h4 Kg3 50. Kh6
+Kxh4 51. Kxh7 $1 Kg4 52. Kg6 Kf4 53. Kf6 Ke4 54. Ke6 Kd4 55. Kd6 Kc4 56. Kc6
+Kb4 57. Kb6 $2 {The last blunder.} (57. Kd5 {This would have been a draw.} Kxa4
+58. Kc4 $1 Ka3 59. Kc3 $1 a4 60. Kc2 $1 Ka2 61. Kc1 a3 62. Kc2 $1 Ka1 63. Kb3
+$1 a2) 57... Kxa4 58. Ka6 Kb4 $1 59. Kb6 a4 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "40"]
+[White "Olson, David R"]
+[Black "Akkurt, Bugra"]
+[Result "1/2-1/2"]
+[ECO "C20"]
+[WhiteElo "1400"]
+[Annotator "Winslow,Elliott"]
+[PlyCount "95"]
+[EventDate "2023.??.??"]
+
+1. e4 e5 2. c4 Nc6 3. Nf3 Nf6 4. Be2 Bd6 5. Nc3 Qe7 6. b3 b6 7. d3 Bb7 8. Bg5
+h6 9. Bh4 (9. Nd5 $1) 9... g5 10. Bg3 g4 11. Nh4 h5 12. Nf5 Qf8 13. Bh4 Nh7 14.
+Nd5 f6 15. Nxd6+ Qxd6 16. Qd2 O-O-O 17. b4 Nd4 18. c5 bxc5 19. bxc5 Qe6 20. Nb4
+Rdf8 21. Rb1 f5 22. Qb2 d6 23. Nd5 Bxd5 24. exd5 Qxd5 25. cxd6 Qxd6 26. Kd2 Kd7
+27. Bd1 Rb8 28. Ba4+ Ke6 29. Qc3 Nf6 30. Rhc1 Rxb1 31. Rxb1 e4 32. Qc4+ Nd5 33.
+Qxd4 Rf8 34. Bb3 c6 35. Re1 Kd7 36. Qxa7+ Nc7 37. d4 Qb4+ 38. Kd1 Ra8 39. Qc5
+Qxc5 40. dxc5 Nb5 41. Kd2 Nd4 42. Kc3 Nxb3 43. axb3 Ke6 44. Bg3 Ra5 45. Kc4 Ra2
+46. Kc3 Kd5 47. Kb4 Rd2 48. Ra1 {Too many missing moves and other errors in
+both scoresheets. Draw in 60 moves or so.} 1/2-1/2
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "41"]
+[White "Ahrens, Richard William"]
+[Black "Athreya, Nagendra"]
+[Result "0-1"]
+[ECO "A01"]
+[WhiteElo "1103"]
+[PlyCount "96"]
+[EventDate "2023.??.??"]
+
+1. b3 e5 2. Bb2 Nc6 3. c4 Nf6 4. Nc3 Bc5 5. e3 d6 6. Bd3 Qe7 7. Nf3 e4 8. Nd5
+Nxd5 9. Bc2 Ndb4 10. Nd4 Qe5 11. O-O Nxd4 12. exd4 Bxd4 13. Bxd4 Qxd4 14. Bxe4
+O-O 15. d3 c6 16. a3 d5 17. axb4 dxe4 18. dxe4 Qxe4 19. Re1 Qg6 20. Re3 Bg4 21.
+Qe1 h5 22. Ra5 Rad8 23. f3 Bh3 24. g3 Qc2 25. Re2 Rd1 26. Rxc2 Rxe1+ 27. Kf2
+Rf1+ 28. Ke3 Re8+ 29. Kf4 f6 30. Rxh5 g5+ 31. Rxg5+ fxg5+ 32. Kxg5 Rxf3 33. Rd2
+Re5+ 34. Kh4 Be6 35. Rd8+ Kg7 36. Rb8 Rf7 37. b5 Kg6 38. Rg8+ Rg7 39. Rxg7+
+Kxg7 40. bxc6 bxc6 41. c5 Kg6 42. g4 Bxb3 43. h3 Rxc5 44. g5 Rc4+ 45. Kg3 Kxg5
+46. h4+ Rxh4 47. Kf3 Bd5+ 48. Kg3 a5 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "42"]
+[White "Adams, Aaron"]
+[Black "Mullins, Thomas N"]
+[Result "0-1"]
+[ECO "A48"]
+[BlackElo "802"]
+[PlyCount "70"]
+[EventDate "2023.??.??"]
+
+1. d4 Nf6 2. Nf3 g6 3. Bg5 Bg7 4. Bxf6 Bxf6 5. e4 O-O 6. Bd3 d6 7. c3 Bg4 8.
+Nbd2 e5 9. d5 c6 10. Qb3 b5 11. h4 a6 12. O-O-O h6 13. Rdg1 Qb6 14. Nh2 Bc8 15.
+g4 Bxh4 16. f3 Bg5 17. Rf1 Nd7 18. a4 Nc5 19. Qc2 Nxa4 20. f4 Bxf4 21. Be2 a5
+22. Rf3 Nc5 23. g5 h5 24. Kd1 a4 25. b4 axb3 26. Nxb3 Nxb3 27. Qxb3 Ra1+ 28.
+Kc2 Rxh1 29. Nf1 Bg4 30. dxc6 Bxf3 31. Bc4 Bxe4+ 32. Kb2 Bxc6 33. Bd3 Qf2+ 34.
+Ka3 Bc1+ 35. Kb4 Qc5+ 0-1
+
+[Event "2023 Spring TNM: u1600"]
+[Site "San Francisco"]
+[Date "2023.03.28"]
+[Round "4"]
+[Board "43"]
+[White "Vasishta, Skanda"]
+[Black "Langendorf, Brian Keith"]
+[Result "0-1"]
+[ECO "B15"]
+[WhiteElo "478"]
+[PlyCount "62"]
+[EventDate "2023.??.??"]
+
+1. e4 c6 2. d4 d5 3. Nc3 e6 4. Nf3 Bb4 5. Bd3 Bxc3+ 6. bxc3 dxe4 7. Bxe4 Nf6 8.
+Bd3 O-O 9. O-O Nbd7 10. Ne5 Qa5 11. Nf3 Qxc3 12. Bd2 Qa3 13. c3 Qd6 14. Qc2 e5
+15. Ng5 h6 16. Bh7+ Kh8 17. Nxf7+ Rxf7 18. Bd3 exd4 19. cxd4 Qxd4 20. Bc4 Re7
+21. Qc1 Nc5 22. Bxh6 Be6 23. Rd1 Qh4 24. Bg5 Qxc4 25. Qe3 Rd7 26. Rxd7 Ncxd7
+27. Rc1 Qe4 28. Qa3 Qe2 29. Rb1 Ne4 30. Be3 Bxa2 31. Rb2 Qe1# 0-1
+

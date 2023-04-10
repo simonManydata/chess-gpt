@@ -1,0 +1,13 @@
+numpy
+matplotlib
+pydantic
+numpy
+openai
+fastapi
+uvicorn
+starlette
+python-dotenv
+PyYAML
+python-chess
+fuzzywuzzy 
+python-Levenshtein

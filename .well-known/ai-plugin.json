@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Mlflow Assistant",
+  "name_for_model": "MlflowAssistant",
+  "description_for_human": "Chess assistant for preparing your upcoming games in chess",
+  "description_for_model": "Chess assistant for preparing your upcoming games in chess",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "http://localhost:5555/.well-known/openapi.yaml",
+    "is_user_authenticated": false
+  },
+  "logo_url": "http://localhost:5555/.well-known/logo.png",
+  "contact_email": "simon.moisselin@gmail.com",
+  "legal_info_url": "http://google.com"
+}
