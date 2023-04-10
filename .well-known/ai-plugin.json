@@ -1,7 +1,7 @@
 {
   "schema_version": "v1",
-  "name_for_human": "Mlflow Assistant",
-  "name_for_model": "MlflowAssistant",
+  "name_for_human": "Chess Assistant",
+  "name_for_model": "ChessAssistant",
   "description_for_human": "Chess assistant for preparing your upcoming games in chess",
   "description_for_model": "Chess assistant for preparing your upcoming games in chess",
   "auth": {

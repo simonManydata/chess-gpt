@@ -11,11 +11,15 @@ components:
       type: object
     SearchRequest:
       properties:
+        color:
+          title: Color
+          type: string
         name:
           title: Name
           type: string
-      required:
-      - name
+        username_chess_com:
+          title: Username Chess Com
+          type: string
       title: SearchRequest
       type: object
     ValidationError:

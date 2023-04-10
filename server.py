@@ -1,31 +1,25 @@
+import requests
+import pandas as pd
 import os
-from fuzzywuzzy import fuzz, process
+from typing import Optional
+from fuzzywuzzy import fuzz
 import chess.pgn
-import json
-import numpy as np
-from fastapi.responses import JSONResponse
-import boto3
-from typing import Any, Optional
 from fastapi import FastAPI
 from dotenv import load_dotenv
 # import BaseModel
 from pydantic import BaseModel
-from mlflow.tracking import MlflowClient
 from starlette.responses import FileResponse
 from fastapi.middleware.cors import CORSMiddleware
-from typing import Dict
-from datetime import datetime
-from typing import List
 import uvicorn
-# import MlflowException
-# import HTTPException
-import mlflow
+from io import StringIO
 from fastapi import HTTPException
-from mlflow.exceptions import MlflowException
+import glob
 app = FastAPI()
 # import HTTPException
 PORT = 5555
 load_dotenv()
+
+
 
 origins = [
     f"http://localhost:{PORT}",
@@ -65,12 +59,74 @@ async def get_openapi(request):
     file_path = "./.well-known/openapi.yaml"
     return FileResponse(file_path, media_type="text/json")
 
-import matplotlib.pyplot as plt
-from pydantic import Field
 
+def get_games_from_chess_com(username):
+    url = f"https://api.chess.com/pub/player/{username}/games/archives"
+    response = requests.get(url)
+
+    if response.status_code != 200:
+        raise Exception(
+            f"Failed to get games for user {username}: {response.text}")
+
+    archives = response.json()["archives"]
+
+    games = []
+    for archive_url in archives:
+        month_games = requests.get(archive_url)
+        if month_games.status_code != 200:
+            raise Exception(
+                f"Failed to get games for user {username}: {month_games.text}")
+
+        pgn_data = month_games.text
+        pgn_file = StringIO(pgn_data)
+        print(f"pgn_file: {month_games.text} for {username}")
+
+        while True:
+            game = chess.pgn.read_game(pgn_file)
+            if game is None:
+                break
+
+            game_info = {
+                "event": game.headers.get("Event", ""),
+                "site": game.headers.get("Site", ""),
+                "date": game.headers.get("Date", ""),
+                "round": game.headers.get("Round", ""),
+                "white": game.headers.get("White", ""),
+                "black": game.headers.get("Black", ""),
+                "result": game.headers.get("Result", ""),
+            }
+            games.append(game_info)
+    return games
+
+
+def get_opening_name(board, openings_df):
+    moves = board.move_stack
+    closest_opening = ""
+    closest_distance = float("inf")
+
+    for index, row in openings_df.iterrows():
+        opening_pgn = row["pgn"].split(" ")
+        distance = len(moves) - len(opening_pgn)
+        if distance < 0:
+            continue
+
+        same_moves = all(
+            [board.move_stack[i].uci() == opening_pgn[i]
+             for i in range(len(opening_pgn))]
+        )
+
+        if same_moves and distance < closest_distance:
+            closest_opening = row["eco_name"]
+            closest_distance = distance
+            if distance == 0:
+                break
+
+    return closest_opening
 
 class SearchRequest(BaseModel):
-    name: str
+    name: Optional[str] = None
+    username_chess_com: Optional[str] = None
+    color: Optional[str] = None
 
 
 def is_name_match(name, player_name):
@@ -78,6 +134,12 @@ def is_name_match(name, player_name):
     return fuzz.token_set_ratio(name, player_name) >= 80
 
 
+
+openings = glob.glob("chess-openings/*.tsv")
+
+openings_df = pd.concat([pd.read_csv(opening, sep="\t") for opening in openings])
+
+import gen
 def get_games_from_pgn(pgn_file, name):
     games = []
     with open(pgn_file) as file:
@@ -90,6 +152,21 @@ def get_games_from_pgn(pgn_file, name):
             black = game.headers.get("Black", "")
 
             if is_name_match(name, white) or is_name_match(name, black):
+                # Get the first 10 moves
+                moves = []
+                node = game
+                for _ in range(10):
+                    node = node.variations[0] if node.variations else None
+                    if node is None:
+                        break
+                    moves.append(node.move.uci())
+
+                # Get the opening name
+                board = game.board()
+                for move in moves:
+                    board.push(chess.Move.from_uci(move))
+                opening_name = get_opening_name(board, openings_df)
+
                 game_info = {
                     "event": game.headers.get("Event", ""),
                     "site": game.headers.get("Site", ""),
@@ -98,6 +175,8 @@ def get_games_from_pgn(pgn_file, name):
                     "white": white,
                     "black": black,
                     "result": game.headers.get("Result", ""),
+                    "moves": moves,
+                    "opening_name": opening_name
                 }
                 games.append(game_info)
     return games
@@ -108,10 +187,16 @@ async def search_games(request: SearchRequest):
     pgns = os.listdir(pgns_path)
 
     all_games = []
-    for pgn in pgns:
-        pgn_file = os.path.join(pgns_path, pgn)
-        games = get_games_from_pgn(pgn_file, request.name)
+    username_chess_com = request.username_chess_com
+    if username_chess_com:
+        games = get_games_from_chess_com(username_chess_com)[:15]
         all_games.extend(games)
+
+    if request.name:
+        for pgn in pgns:
+            pgn_file = os.path.join(pgns_path, pgn)
+            games = get_games_from_pgn(pgn_file, request.name)[:15]
+            all_games.extend(games)
 
     if not all_games:
         raise HTTPException(status_code=404, detail="Name not found")

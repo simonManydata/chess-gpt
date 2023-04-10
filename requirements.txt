@@ -11,3 +11,4 @@ PyYAML
 python-chess
 fuzzywuzzy 
 python-Levenshtein
+eco
