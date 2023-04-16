@@ -17,6 +17,15 @@ from io import StringIO
 from fastapi import HTTPException
 import glob
 app = FastAPI()
+
+# Constants
+ERROR_THRESHOLD = {
+    'BLUNDER': -300,
+    'MISTAKE': -150,
+    'DUBIOUS': -75,
+}
+NEEDS_ANNOTATION_THRESHOLD = 7.5
+
 # import HTTPException
 PORT = 5555
 load_dotenv()
@@ -41,6 +50,9 @@ origins = [
     f"http://localhost:{PORT}",
     "https://chat.openai.com",
 ]
+
+
+CACHE_MAINLINES = {}
 
 
 @app.route("/.well-known/ai-plugin.json")
@@ -141,8 +153,7 @@ openings = glob.glob("chess-openings/*.tsv")
 
 openings_df = pd.concat([pd.read_csv(opening, sep="\t") for opening in openings])
 
-import gen
-def get_games_from_pgn(pgn_file, name):
+def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper bound
     games = []
     with open(pgn_file) as file:
         while True:
@@ -157,7 +168,7 @@ def get_games_from_pgn(pgn_file, name):
                 # Get the first 10 moves
                 moves = []
                 node = game
-                for _ in range(10):
+                for _ in range(number_moves):
                     node = node.variations[0] if node.variations else None
                     if node is None:
                         break
@@ -168,6 +179,11 @@ def get_games_from_pgn(pgn_file, name):
                 for move in moves:
                     board.push(chess.Move.from_uci(move))
                 opening_name = get_opening_name(board, openings_df)
+                
+                import hashlib
+                mainline_moves_hash = hashlib.shake_128(str(game.mainline_moves()).encode('utf-8')).hexdigest(4)
+
+                CACHE_MAINLINES[mainline_moves_hash] = str(game.mainline_moves())
 
                 game_info = {
                     "event": game.headers.get("Event", ""),
@@ -177,7 +193,8 @@ def get_games_from_pgn(pgn_file, name):
                     "white": white,
                     "black": black,
                     "result": game.headers.get("Result", ""),
-                    "moves": moves,
+                    "mainline_moves": str(game.mainline_moves()),
+                    "hash": mainline_moves_hash,
                     "opening_name": opening_name
                 }
                 games.append(game_info)
@@ -188,16 +205,14 @@ async def search_games(request: SearchRequest):
     pgns_path = "pgns"
     pgns = os.listdir(pgns_path)
 
+
     all_games = []
-    username_chess_com = request.username_chess_com
-    if username_chess_com:
-        games = get_games_from_chess_com(username_chess_com)[:15]
-        all_games.extend(games)
+    LIMIT_GAMES = 15
 
     if request.name:
         for pgn in pgns:
             pgn_file = os.path.join(pgns_path, pgn)
-            games = get_games_from_pgn(pgn_file, request.name)[:15]
+            games = get_games_from_pgn(pgn_file, request.name)[:LIMIT_GAMES]
             all_games.extend(games)
 
     if not all_games:
@@ -209,13 +224,14 @@ async def search_games(request: SearchRequest):
 # Define a data model for the request body
 class EvaluateMovesRequest(BaseModel):
     pgn: str
+    hash: Optional[str]
 
 # Define a data model for the response
 
 
 class Evaluation(BaseModel):
     move: str
-    score: int
+    score: Optional[int]
     score_change: Optional[int]
 
 # Define the endpoint for evaluating moves
@@ -225,13 +241,19 @@ from typing import List
 async def evaluate_moves(request: EvaluateMovesRequest) -> List[Evaluation]:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
-    try:
-        pgn_data = request.pgn
+
+    if request.hash and hash in CACHE_MAINLINES:
+        pgn_data = CACHE_MAINLINES[request.hash]
         pgn_file = StringIO(pgn_data)
         game = chess.pgn.read_game(pgn_file)
-    except ValueError:
-        raise HTTPException(status_code=400, detail="Invalid PGN")
-    # Initialize the chess engine (replace "path/to/stockfish" with the actual path to the Stockfish binary)
+    else:
+        try:
+            pgn_data = request.pgn
+            pgn_file = StringIO(pgn_data)
+            game = chess.pgn.read_game(pgn_file)
+        except ValueError:
+            raise HTTPException(status_code=400, detail="Invalid PGN")
+        # Initialize the chess engine (replace "path/to/stockfish" with the actual path to the Stockfish binary)
     
 
     # Initialize the board and evaluate each move
@@ -245,7 +267,7 @@ async def evaluate_moves(request: EvaluateMovesRequest) -> List[Evaluation]:
         current_score = info["score"].relative.score()
 
         # Calculate the score change if there was a previous move
-        if previous_score is not None:
+        if previous_score is not None and current_score is not None:
             score_change = current_score - previous_score
 
         else:

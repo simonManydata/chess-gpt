@@ -2,6 +2,9 @@ components:
   schemas:
     EvaluateMovesRequest:
       properties:
+        hash:
+          title: Hash
+          type: string
         pgn:
           title: Pgn
           type: string
@@ -22,7 +25,6 @@ components:
           type: integer
       required:
       - move
-      - score
       title: Evaluation
       type: object
     HTTPValidationError:

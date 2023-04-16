@@ -8,9 +8,10 @@ uvicorn
 starlette
 python-dotenv
 PyYAML
-python-chess
+python-chess # use 3.9
 fuzzywuzzy 
 python-Levenshtein
 eco
 chess_gif
 # apt and libvips stockfish (or install from source)
+chess-annotator
