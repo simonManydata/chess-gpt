@@ -1,3 +1,5 @@
+from tqdm.auto import tqdm
+import chess.engine
 import requests
 import pandas as pd
 import os
@@ -18,8 +20,8 @@ app = FastAPI()
 # import HTTPException
 PORT = 5555
 load_dotenv()
-
-
+STOCKFISH_PATH = "/opt/homebrew/bin/stockfish"
+TIME_ANALYSIS = 0.1
 
 origins = [
     f"http://localhost:{PORT}",
@@ -204,7 +206,62 @@ async def search_games(request: SearchRequest):
     return all_games
 
 
+# Define a data model for the request body
+class EvaluateMovesRequest(BaseModel):
+    pgn: str
 
+# Define a data model for the response
+
+
+class Evaluation(BaseModel):
+    move: str
+    score: int
+    score_change: Optional[int]
+
+# Define the endpoint for evaluating moves
+
+from typing import List
+@app.post("/evaluate_moves", response_model=List[Evaluation])
+async def evaluate_moves(request: EvaluateMovesRequest) -> List[Evaluation]:
+    engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
+    # Parse the PGN
+    try:
+        pgn_data = request.pgn
+        pgn_file = StringIO(pgn_data)
+        game = chess.pgn.read_game(pgn_file)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid PGN")
+    # Initialize the chess engine (replace "path/to/stockfish" with the actual path to the Stockfish binary)
+    
+
+    # Initialize the board and evaluate each move
+    evaluations = []
+    board = game.board()
+    
+    previous_score = None
+
+    for move in tqdm(game.mainline_moves()):
+        info = engine.analyse(board, chess.engine.Limit(time=TIME_ANALYSIS))
+        current_score = info["score"].relative.score()
+
+        # Calculate the score change if there was a previous move
+        if previous_score is not None:
+            score_change = current_score - previous_score
+
+        else:
+            score_change = None
+        # Append the evaluation to the list
+        evaluations.append(Evaluation(
+            move=str(move),
+            score=current_score,
+            score_change=score_change if score_change is not None else None
+        ))
+        previous_score = current_score
+        board.push(move)
+
+    engine.quit()
+
+    return evaluations
 
 
 @app.get("/generate-openapi-yaml")
@@ -235,6 +292,8 @@ async def generate_openapi_yaml():
     return {"detail": "OpenAPI YAML schema has been generated and stored in .well-known/openapi.yaml"}
 
 
+
+
 @app.on_event("startup")
 async def on_startup():
     # Call the generate_openapi_yaml function during the startup event
@@ -246,4 +305,5 @@ def start():
     
 
 if __name__ == "__main__":
+    
     start()

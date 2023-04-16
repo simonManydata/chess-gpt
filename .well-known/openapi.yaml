@@ -1,5 +1,30 @@
 components:
   schemas:
+    EvaluateMovesRequest:
+      properties:
+        pgn:
+          title: Pgn
+          type: string
+      required:
+      - pgn
+      title: EvaluateMovesRequest
+      type: object
+    Evaluation:
+      properties:
+        move:
+          title: Move
+          type: string
+        score:
+          title: Score
+          type: integer
+        score_change:
+          title: Score Change
+          type: integer
+      required:
+      - move
+      - score
+      title: Evaluation
+      type: object
     HTTPValidationError:
       properties:
         detail:
@@ -48,6 +73,32 @@ info:
   version: 1.0.0
 openapi: 3.0.2
 paths:
+  /evaluate_moves:
+    post:
+      operationId: evaluate_moves_evaluate_moves_post
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/EvaluateMovesRequest'
+        required: true
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Evaluation'
+                title: Response Evaluate Moves Evaluate Moves Post
+                type: array
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Evaluate Moves
   /games:
     post:
       operationId: search_games_games_post
