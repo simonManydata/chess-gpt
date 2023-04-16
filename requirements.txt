@@ -12,3 +12,5 @@ python-chess
 fuzzywuzzy 
 python-Levenshtein
 eco
+chess_gif
+# apt and libvips stockfish (or install from source)

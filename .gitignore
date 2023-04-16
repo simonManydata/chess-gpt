@@ -2,3 +2,6 @@ predictions/
 mlruns/
 .env
 __pycache__/
+*.pgn
+*.pdf
+.DS_Store
