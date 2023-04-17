@@ -1,5 +1,12 @@
 components:
   schemas:
+    ChessColor:
+      description: An enumeration.
+      enum:
+      - white
+      - black
+      title: ChessColor
+      type: string
     EvaluateMovesRequest:
       properties:
         pgn_id:
@@ -42,10 +49,12 @@ components:
     SearchRequest:
       properties:
         color:
-          title: Color
-          type: string
+          $ref: '#/components/schemas/ChessColor'
         name:
           title: Name
+          type: string
+        opening:
+          title: Opening
           type: string
       title: SearchRequest
       type: object
@@ -83,8 +92,9 @@ paths:
         name: description
         required: false
         schema:
-          default: Evaluate score change for each moves. Return a table of all the
-            worst moves made by each player (player, move_number)
+          default: Evaluate score change for each moves. After getting the response,
+            return a markdown table of the worst moves made by each player (player|move|description|how
+            to improve)
           title: Description
       requestBody:
         content:

@@ -80,11 +80,19 @@ async def get_openapi(request):
     file_path = "./.well-known/openapi.yaml"
     return FileResponse(file_path, media_type="text/json")
 
+from enum import Enum
+# Define an enumeration for the allowed color values
+
+
+class ChessColor(str, Enum):
+    white = "white"
+    black = "black"
 
 
 class SearchRequest(BaseModel):
     name: Optional[str] = None
-    color: Optional[str] = None
+    color: Optional[ChessColor] = None
+    opening: Optional[str] = None
 
 
 def is_name_match(name, player_name):
@@ -114,6 +122,10 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
 
             if is_name_match(name, white) or is_name_match(name, black):
                 # Get the first 10 moves
+                if is_name_match(name, white):
+                    white = name
+                if is_name_match(name, black):
+                    black = name
                 moves = []
                 node = game
                 for _ in range(number_moves):
@@ -135,15 +147,16 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
 
                 pgn_id = hash_pgn_to_8_characters(pgn_moves)
                 GAMES[pgn_id] = pgn_moves
+
                 game_info = {
-                    "event": game.headers.get("Event", ""),
-                    "site": game.headers.get("Site", ""),
+                    # "event": game.headers.get("Event", ""),
+                    # "site": game.headers.get("Site", ""),
                     "date": game.headers.get("Date", ""),
-                    "round": game.headers.get("Round", ""),
+                    # "round": game.headers.get("Round", ""),
                     "white": white,
                     "black": black,
                     "result": game.headers.get("Result", ""),
-                    "mainline_moves": pgn_moves,
+                    # "mainline_moves": pgn_moves,
                     "opening": opening,
                     "pgn_id": pgn_id,
                 }
@@ -155,16 +168,26 @@ async def search_games(request: SearchRequest):
     pgns_path = "pgns"
     pgns = os.listdir(pgns_path)
 
-
     all_games = []
     LIMIT_GAMES = 15
 
     if request.name:
         for pgn in pgns:
             pgn_file = os.path.join(pgns_path, pgn)
-            games = get_games_from_pgn(pgn_file, request.name)[:LIMIT_GAMES]
+            games = get_games_from_pgn(pgn_file, request.name)#[:LIMIT_GAMES]
             all_games.extend(games)
 
+
+    all_games_filtered = []
+    for game in all_games:
+        if request.color:
+            if request.color == ChessColor.white and game["white"] == request.name:
+                all_games_filtered.append(game)
+            elif request.color == ChessColor.black and game["black"] == request.name:
+                all_games_filtered.append(game)
+        elif request.opening:
+            if request.opening.lower() in game["opening"].lower():
+                all_games_filtered.append(game)
     if not all_games:
         raise HTTPException(status_code=404, detail="Name not found")
 
@@ -184,7 +207,7 @@ class Evaluation(BaseModel):
 # Define the endpoint for evaluating moves
 
 @app.post("/evaluate_moves", response_model=Evaluation)
-async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. Return a table of all the worst moves made by each player (player, move_number)") -> Evaluation:
+async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. After getting the response, return a markdown table of the worst moves made by each player (player|move|description|how to improve)") -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
     limit_per_move = 0.1
