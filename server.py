@@ -124,6 +124,7 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
     with open(pgn_file) as file:
         while True:
             game = chess.pgn.read_game(file)
+            pgn_full = game.__str__()
             if game is None:
                 break
 
@@ -162,7 +163,7 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                 GAMES[pgn_id] = pgn_moves
 
                 import urllib.parse
-                link = f"https://chess.com/analysis?pgn={pgn_moves}"
+                link = f"https://chess.com/analysis?pgn={pgn_full}"
                 link = urllib.parse.quote(link, safe=":/?=")
 
                 
@@ -179,7 +180,7 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                 games.append(game_info)
     return games
 
-@app.post("/games", response_model=List[GameInfo], description="Search for games by player name, color, or opening. Always return the link as clickable.")
+@app.post("/games", response_model=List[GameInfo], description="When returning game info, make the link to the game clickable in markdown")
 async def search_games(request: SearchRequest):
     pgns_path = "pgns"
     pgns = os.listdir(pgns_path)
