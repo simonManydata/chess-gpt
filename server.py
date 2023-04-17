@@ -228,8 +228,12 @@ expiration = 3600
 s3_client = boto3.client('s3')
 
 
-@app.post("/generate-gif-game/")
-async def generate_gif_game(pgn_data: str):
+class GenerateGifGameRequest(BaseModel):
+    pgn_data: str
+
+@app.post("/generate-gif-game/", description="Generate a gif game from a PGN file. Embed the gif in markdown with ![]({url})")
+async def generate_gif_game(request: GenerateGifGameRequest):
+    pgn_data: str = request.pgn_data
     import uuid
     import tempfile
     from pgn_to_gif import PgnToGifCreator

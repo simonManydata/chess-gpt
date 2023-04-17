@@ -18,6 +18,15 @@ components:
       - pgn_with_score_change
       title: Evaluation
       type: object
+    GenerateGifGameRequest:
+      properties:
+        pgn_data:
+          title: Pgn Data
+          type: string
+      required:
+      - pgn_data
+      title: GenerateGifGameRequest
+      type: object
     HTTPValidationError:
       properties:
         detail:
@@ -113,14 +122,15 @@ paths:
       summary: Search Games
   /generate-gif-game/:
     post:
+      description: Generate a gif game from a PGN file. Embed the gif in markdown
+        with ![]({url})
       operationId: generate_gif_game_generate_gif_game__post
-      parameters:
-      - in: query
-        name: pgn_data
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/GenerateGifGameRequest'
         required: true
-        schema:
-          title: Pgn Data
-          type: string
       responses:
         '200':
           content:
