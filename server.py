@@ -16,6 +16,8 @@ import uvicorn
 from io import StringIO
 from fastapi import HTTPException
 import glob
+
+from helpers import add_score_change
 app = FastAPI()
 
 # Constants
@@ -52,7 +54,7 @@ origins = [
 ]
 
 
-CACHE_MAINLINES = {}
+
 
 
 @app.route("/.well-known/ai-plugin.json")
@@ -92,6 +94,7 @@ def get_games_from_chess_com(username):
                 f"Failed to get games for user {username}: {month_games.text}")
 
         pgn_data = month_games.text
+        
         pgn_file = StringIO(pgn_data)
         print(f"pgn_file: {month_games.text} for {username}")
 
@@ -224,66 +227,30 @@ async def search_games(request: SearchRequest):
 # Define a data model for the request body
 class EvaluateMovesRequest(BaseModel):
     pgn: str
-    hash: Optional[str]
+    
 
 # Define a data model for the response
 
 
 class Evaluation(BaseModel):
-    move: str
-    score: Optional[int]
-    score_change: Optional[int]
+    pgn_with_score_change: str
 
 # Define the endpoint for evaluating moves
 
 from typing import List
-@app.post("/evaluate_moves", response_model=List[Evaluation])
-async def evaluate_moves(request: EvaluateMovesRequest) -> List[Evaluation]:
+@app.post("/evaluate_moves", response_model=Evaluation)
+async def evaluate_moves(request: EvaluateMovesRequest) -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
-
-    if request.hash and hash in CACHE_MAINLINES:
-        pgn_data = CACHE_MAINLINES[request.hash]
-        pgn_file = StringIO(pgn_data)
-        game = chess.pgn.read_game(pgn_file)
-    else:
-        try:
-            pgn_data = request.pgn
-            pgn_file = StringIO(pgn_data)
-            game = chess.pgn.read_game(pgn_file)
-        except ValueError:
-            raise HTTPException(status_code=400, detail="Invalid PGN")
-        # Initialize the chess engine (replace "path/to/stockfish" with the actual path to the Stockfish binary)
-    
-
-    # Initialize the board and evaluate each move
-    evaluations = []
-    board = game.board()
-    
-    previous_score = None
-
-    for move in tqdm(game.mainline_moves()):
-        info = engine.analyse(board, chess.engine.Limit(time=TIME_ANALYSIS))
-        current_score = info["score"].relative.score()
-
-        # Calculate the score change if there was a previous move
-        if previous_score is not None and current_score is not None:
-            score_change = current_score - previous_score
-
-        else:
-            score_change = None
-        # Append the evaluation to the list
-        evaluations.append(Evaluation(
-            move=str(move),
-            score=current_score,
-            score_change=score_change if score_change is not None else None
-        ))
-        previous_score = current_score
-        board.push(move)
-
-    engine.quit()
-
-    return evaluations
+    limit_per_move = 0.1
+    try:
+        pgn_data = request.pgn
+        pgn_data = add_score_change(pgn_data, engine, limit_per_move)
+    except ValueError:
+        raise HTTPException(status_code=400, detail="Invalid PGN")
+    # Initialize the chess engine (replace "path/to/stockfish" with the actual path to the Stockfish binary)
+    engine.close()
+    return Evaluation(pgn_with_score_change=pgn_data)
 
 
 @app.get("/generate-openapi-yaml")

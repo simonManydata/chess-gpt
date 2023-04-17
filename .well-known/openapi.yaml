@@ -2,9 +2,6 @@ components:
   schemas:
     EvaluateMovesRequest:
       properties:
-        hash:
-          title: Hash
-          type: string
         pgn:
           title: Pgn
           type: string
@@ -14,17 +11,11 @@ components:
       type: object
     Evaluation:
       properties:
-        move:
-          title: Move
+        pgn_with_score_change:
+          title: Pgn With Score Change
           type: string
-        score:
-          title: Score
-          type: integer
-        score_change:
-          title: Score Change
-          type: integer
       required:
-      - move
+      - pgn_with_score_change
       title: Evaluation
       type: object
     HTTPValidationError:
@@ -89,10 +80,7 @@ paths:
           content:
             application/json:
               schema:
-                items:
-                  $ref: '#/components/schemas/Evaluation'
-                title: Response Evaluate Moves Evaluate Moves Post
-                type: array
+                $ref: '#/components/schemas/Evaluation'
           description: Successful Response
         '422':
           content:
