@@ -264,7 +264,6 @@ async def generate_gif_game(request: GenerateGifGameRequest):
             Params={'Bucket': bucket_name, 'Key': object_key},
             ExpiresIn=expiration
         )
-
         return JSONResponse(content={"url": signed_url})
 
 @app.get("/generate-openapi-yaml")
