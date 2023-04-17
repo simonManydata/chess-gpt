@@ -1,7 +1,6 @@
-from tqdm.auto import tqdm
+from fastapi.responses import JSONResponse
 import chess.engine
 import requests
-import pandas as pd
 import os
 from typing import Optional
 from fuzzywuzzy import fuzz
@@ -116,30 +115,6 @@ def get_games_from_chess_com(username):
     return games
 
 
-def get_opening_name(board, openings_df):
-    moves = board.move_stack
-    closest_opening = ""
-    closest_distance = float("inf")
-
-    for index, row in openings_df.iterrows():
-        opening_pgn = row["pgn"].split(" ")
-        distance = len(moves) - len(opening_pgn)
-        if distance < 0:
-            continue
-
-        same_moves = all(
-            [board.move_stack[i].uci() == opening_pgn[i]
-             for i in range(len(opening_pgn))]
-        )
-
-        if same_moves and distance < closest_distance:
-            closest_opening = row["eco_name"]
-            closest_distance = distance
-            if distance == 0:
-                break
-
-    return closest_opening
-
 class SearchRequest(BaseModel):
     name: Optional[str] = None
     username_chess_com: Optional[str] = None
@@ -153,8 +128,6 @@ def is_name_match(name, player_name):
 
 
 openings = glob.glob("chess-openings/*.tsv")
-
-openings_df = pd.concat([pd.read_csv(opening, sep="\t") for opening in openings])
 
 def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper bound
     games = []
@@ -181,12 +154,10 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                 board = game.board()
                 for move in moves:
                     board.push(chess.Move.from_uci(move))
-                opening_name = get_opening_name(board, openings_df)
                 
                 import hashlib
                 mainline_moves_hash = hashlib.shake_128(str(game.mainline_moves()).encode('utf-8')).hexdigest(4)
 
-                CACHE_MAINLINES[mainline_moves_hash] = str(game.mainline_moves())
 
                 game_info = {
                     "event": game.headers.get("Event", ""),
@@ -198,7 +169,7 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                     "result": game.headers.get("Result", ""),
                     "mainline_moves": str(game.mainline_moves()),
                     "hash": mainline_moves_hash,
-                    "opening_name": opening_name
+                    # "opening_name": opening_name
                 }
                 games.append(game_info)
     return games
@@ -237,7 +208,6 @@ class Evaluation(BaseModel):
 
 # Define the endpoint for evaluating moves
 
-from typing import List
 @app.post("/evaluate_moves", response_model=Evaluation)
 async def evaluate_moves(request: EvaluateMovesRequest) -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
@@ -252,6 +222,45 @@ async def evaluate_moves(request: EvaluateMovesRequest) -> Evaluation:
     engine.close()
     return Evaluation(pgn_with_score_change=pgn_data)
 
+bucket_name = "chess-gpt"
+import boto3
+expiration = 3600
+s3_client = boto3.client('s3')
+
+
+@app.post("/generate-gif-game/")
+async def generate_gif_game(pgn_data: str):
+    import uuid
+    import tempfile
+    from pgn_to_gif import PgnToGifCreator
+    creator = PgnToGifCreator(reverse=True, duration=0.3,)
+
+    with tempfile.TemporaryDirectory() as temp_dir:
+        input_pgn_path = os.path.join(temp_dir, "input.pgn")
+        random_filename = str(uuid.uuid4())
+        output_gif_path = os.path.join(temp_dir, f"{random_filename}.gif")
+
+        with open(input_pgn_path, "w") as pgn_file:
+            pgn_file.write(pgn_data)
+
+        creator.create_gif(input_pgn_path, out_path=output_gif_path)
+
+        # Set the appropriate values for your S3 bucket and object key
+        
+        object_key = f"gif/{random_filename}.gif"
+
+        # Upload the file to S3
+        s3 = boto3.client("s3")
+        s3.upload_file(output_gif_path, bucket_name, object_key)
+
+        # Generate a presigned URL
+        signed_url = s3_client.generate_presigned_url(
+            'get_object',
+            Params={'Bucket': bucket_name, 'Key': object_key},
+            ExpiresIn=expiration
+        )
+
+        return JSONResponse(content={"url": signed_url})
 
 @app.get("/generate-openapi-yaml")
 async def generate_openapi_yaml():
@@ -294,5 +303,4 @@ def start():
     
 
 if __name__ == "__main__":
-    
     start()

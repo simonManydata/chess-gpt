@@ -111,6 +111,29 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Search Games
+  /generate-gif-game/:
+    post:
+      operationId: generate_gif_game_generate_gif_game__post
+      parameters:
+      - in: query
+        name: pgn_data
+        required: true
+        schema:
+          title: Pgn Data
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema: {}
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Generate Gif Game
   /generate-openapi-yaml:
     get:
       operationId: generate_openapi_yaml_generate_openapi_yaml_get
