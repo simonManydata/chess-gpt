@@ -17,6 +17,8 @@ components:
     Evaluation:
       properties:
         pgn_with_score_change:
+          description: PGN with score change. Only showing score change if change
+            ? 15
           title: Pgn With Score Change
           type: string
       required:
@@ -86,16 +88,9 @@ openapi: 3.0.2
 paths:
   /evaluate_moves:
     post:
+      description: Always return a markdown table containing the worst moves made
+        by each player (player|move|description|score_change)
       operationId: evaluate_moves_evaluate_moves_post
-      parameters:
-      - in: query
-        name: description
-        required: false
-        schema:
-          default: Evaluate score change for each moves. After getting the response,
-            return a markdown table of the worst moves made by each player (player|move|description|how
-            to improve)
-          title: Description
       requestBody:
         content:
           application/json:

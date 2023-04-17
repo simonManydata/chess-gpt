@@ -1,3 +1,4 @@
+from pydantic import Field
 import boto3
 from fastapi.responses import JSONResponse
 import chess.engine
@@ -191,7 +192,7 @@ async def search_games(request: SearchRequest):
     if not all_games:
         raise HTTPException(status_code=404, detail="Name not found")
 
-    return all_games
+    return all_games_filtered
 
 
 # Define a data model for the request body
@@ -201,13 +202,17 @@ class EvaluateMovesRequest(BaseModel):
 # Define a data model for the response
 
 
+
 class Evaluation(BaseModel):
     pgn_with_score_change: str
+    pgn_with_score_change: str = Field(
+        ..., description="PGN with score change. Only showing score change if change ? 15")
 
 # Define the endpoint for evaluating moves
 
-@app.post("/evaluate_moves", response_model=Evaluation)
-async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. After getting the response, return a markdown table of the worst moves made by each player (player|move|description|how to improve)") -> Evaluation:
+
+@app.post("/evaluate_moves", response_model=Evaluation, description="Always return a markdown table containing the worst moves made by each player (player|move|description|score_change)")
+async def evaluate_moves(request: EvaluateMovesRequest, ) -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
     limit_per_move = 0.1
