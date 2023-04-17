@@ -4,7 +4,7 @@ from fastapi.responses import JSONResponse
 import chess.engine
 import requests
 import os
-from typing import Optional
+from typing import List, Optional
 from fuzzywuzzy import fuzz
 import chess.pgn
 from fastapi import FastAPI
@@ -98,7 +98,7 @@ class SearchRequest(BaseModel):
 
 def is_name_match(name, player_name):
     # Adjust this threshold as needed
-    return fuzz.token_set_ratio(name, player_name) >= 80
+    return fuzz.token_set_ratio(name.lower(), player_name.lower()) >= 60
 
 
 
@@ -109,6 +109,15 @@ openings = glob.glob("chess-openings/*.tsv")
 GAMES = {
 }
 
+
+class GameInfo(BaseModel):
+    date: str
+    white: str
+    black: str
+    result: str
+    opening: str
+    pgn_id: str
+    link: str
 def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper bound
     games = []
 
@@ -144,33 +153,38 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                 moves = extract_moves_from_game(game)
                 pgn_moves = moves_to_pgn(moves)
 
+                if not pgn_moves:
+                    raise ValueError("No moves found in game")
+
                 opening = game.headers["Opening"]
 
                 pgn_id = hash_pgn_to_8_characters(pgn_moves)
                 GAMES[pgn_id] = pgn_moves
 
-                game_info = {
-                    # "event": game.headers.get("Event", ""),
-                    # "site": game.headers.get("Site", ""),
-                    "date": game.headers.get("Date", ""),
-                    # "round": game.headers.get("Round", ""),
-                    "white": white,
-                    "black": black,
-                    "result": game.headers.get("Result", ""),
-                    # "mainline_moves": pgn_moves,
-                    "opening": opening,
-                    "pgn_id": pgn_id,
-                }
+                import urllib.parse
+                link = f"https://chess.com/analysis?pgn={pgn_moves}"
+                link = urllib.parse.quote(link, safe=":/?=")
+
+                
+                game_info = GameInfo(
+                    date=game.headers.get("Date", ""),
+                    white=white,
+                    black=black,
+                    result=game.headers.get("Result", ""),
+                    opening=opening,
+                    pgn_id=pgn_id,
+                    link=link,
+                )
+                
                 games.append(game_info)
     return games
 
-@app.post("/games")
+@app.post("/games", response_model=List[GameInfo], description="Search for games by player name, color, or opening. Always return the link as clickable.")
 async def search_games(request: SearchRequest):
     pgns_path = "pgns"
     pgns = os.listdir(pgns_path)
 
     all_games = []
-    LIMIT_GAMES = 15
 
     if request.name:
         for pgn in pgns:
@@ -182,13 +196,15 @@ async def search_games(request: SearchRequest):
     all_games_filtered = []
     for game in all_games:
         if request.color:
-            if request.color == ChessColor.white and game["white"] == request.name:
+            if request.color == ChessColor.white and game.white == request.name:
                 all_games_filtered.append(game)
-            elif request.color == ChessColor.black and game["black"] == request.name:
+            elif request.color == ChessColor.black and game.black == request.name:
                 all_games_filtered.append(game)
         elif request.opening:
-            if request.opening.lower() in game["opening"].lower():
+            if request.opening.lower() in game.opening.lower():
                 all_games_filtered.append(game)
+        else:
+            all_games_filtered.append(game)
     if not all_games:
         raise HTTPException(status_code=404, detail="Name not found")
 
@@ -207,11 +223,10 @@ class Evaluation(BaseModel):
     pgn_with_score_change: str
     pgn_with_score_change: str = Field(
         ..., description="PGN with score change. Only showing score change if change ? 15")
-
 # Define the endpoint for evaluating moves
 
 
-@app.post("/evaluate_moves", response_model=Evaluation, description="Always return a markdown table containing the worst moves made by each player (player|move|description|score_change)")
+@app.post("/evaluate_moves", response_model=Evaluation, description="Always return a markdown table containing the worst moves made by each player (player|move|score_change)")
 async def evaluate_moves(request: EvaluateMovesRequest, ) -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
@@ -222,7 +237,6 @@ async def evaluate_moves(request: EvaluateMovesRequest, ) -> Evaluation:
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid PGN")
     # Initialize the chess engine (replace "path/to/stockfish" with the actual path to the Stockfish binary)
-    engine.close()
     return Evaluation(pgn_with_score_change=pgn_data)
 
 

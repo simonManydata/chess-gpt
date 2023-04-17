@@ -25,6 +25,39 @@ components:
       - pgn_with_score_change
       title: Evaluation
       type: object
+    GameInfo:
+      properties:
+        black:
+          title: Black
+          type: string
+        date:
+          title: Date
+          type: string
+        link:
+          title: Link
+          type: string
+        opening:
+          title: Opening
+          type: string
+        pgn_id:
+          title: Pgn Id
+          type: string
+        result:
+          title: Result
+          type: string
+        white:
+          title: White
+          type: string
+      required:
+      - date
+      - white
+      - black
+      - result
+      - opening
+      - pgn_id
+      - link
+      title: GameInfo
+      type: object
     GenerateGifGameRequest:
       properties:
         pgn_data:
@@ -89,7 +122,7 @@ paths:
   /evaluate_moves:
     post:
       description: Always return a markdown table containing the worst moves made
-        by each player (player|move|description|score_change)
+        by each player (player|move|score_change)
       operationId: evaluate_moves_evaluate_moves_post
       requestBody:
         content:
@@ -113,6 +146,8 @@ paths:
       summary: Evaluate Moves
   /games:
     post:
+      description: Search for games by player name, color, or opening. Always return
+        the link as clickable.
       operationId: search_games_games_post
       requestBody:
         content:
@@ -124,7 +159,11 @@ paths:
         '200':
           content:
             application/json:
-              schema: {}
+              schema:
+                items:
+                  $ref: '#/components/schemas/GameInfo'
+                title: Response Search Games Games Post
+                type: array
           description: Successful Response
         '422':
           content:
