@@ -23,6 +23,10 @@ components:
         pgn_data:
           title: Pgn Data
           type: string
+        reverse:
+          default: false
+          title: Reverse
+          type: boolean
       required:
       - pgn_data
       title: GenerateGifGameRequest
@@ -78,6 +82,13 @@ paths:
   /evaluate_moves:
     post:
       operationId: evaluate_moves_evaluate_moves_post
+      parameters:
+      - in: query
+        name: description
+        required: false
+        schema:
+          default: Evaluate score change for each moves. Only show change if > 15
+          title: Description
       requestBody:
         content:
           application/json:
@@ -122,8 +133,8 @@ paths:
       summary: Search Games
   /generate-gif-game/:
     post:
-      description: Generate a gif game from a PGN file. Embed the gif in markdown
-        with ![]({url})
+      description: Generate a gif game from a PGN file. Use reverse if player is black.
+        Embed the gif in markdown with ![]({url})
       operationId: generate_gif_game_generate_gif_game__post
       requestBody:
         content:

@@ -209,7 +209,7 @@ class Evaluation(BaseModel):
 # Define the endpoint for evaluating moves
 
 @app.post("/evaluate_moves", response_model=Evaluation)
-async def evaluate_moves(request: EvaluateMovesRequest) -> Evaluation:
+async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. Only show change if > 15") -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
     limit_per_move = 0.1
@@ -230,14 +230,16 @@ s3_client = boto3.client('s3')
 
 class GenerateGifGameRequest(BaseModel):
     pgn_data: str
+    reverse: bool = False
 
-@app.post("/generate-gif-game/", description="Generate a gif game from a PGN file. Embed the gif in markdown with ![]({url})")
+@app.post("/generate-gif-game/", description="Generate a gif game from a PGN file. Use reverse if player is black. Embed the gif in markdown with ![]({url})")
 async def generate_gif_game(request: GenerateGifGameRequest):
     pgn_data: str = request.pgn_data
+    reverse: bool = request.reverse
     import uuid
     import tempfile
     from pgn_to_gif import PgnToGifCreator
-    creator = PgnToGifCreator(reverse=True, duration=0.3,)
+    creator = PgnToGifCreator(reverse=reverse, duration=0.3,)
 
     with tempfile.TemporaryDirectory() as temp_dir:
         input_pgn_path = os.path.join(temp_dir, "input.pgn")
