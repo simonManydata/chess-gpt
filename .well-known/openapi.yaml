@@ -2,9 +2,6 @@ components:
   schemas:
     EvaluateMovesRequest:
       properties:
-        pgn:
-          title: Pgn
-          type: string
         pgn_id:
           title: Pgn Id
           type: string
@@ -24,12 +21,13 @@ components:
         pgn_data:
           title: Pgn Data
           type: string
+        pgn_id:
+          title: Pgn Id
+          type: string
         reverse:
           default: false
           title: Reverse
           type: boolean
-      required:
-      - pgn_data
       title: GenerateGifGameRequest
       type: object
     HTTPValidationError:
@@ -48,9 +46,6 @@ components:
           type: string
         name:
           title: Name
-          type: string
-        username_chess_com:
-          title: Username Chess Com
           type: string
       title: SearchRequest
       type: object
@@ -88,9 +83,8 @@ paths:
         name: description
         required: false
         schema:
-          default: Evaluate score change for each moves. Only show change if > 15.
-            Can query game using pgn_id or pgn directly. Use id for faster request
-            and processing
+          default: Evaluate score change for each moves. Return a table of all the
+            worst moves made by each player (player, move_number)
           title: Description
       requestBody:
         content:

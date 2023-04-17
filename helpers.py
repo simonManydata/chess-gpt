@@ -165,6 +165,22 @@ def extract_moves_from_pgn(pgn_string):
 
     return moves
 
+def extract_moves_from_game(game):
+    # Get the main line (list of moves) from the game
+    main_line = game.mainline_moves()
+
+    # Create a chess board to convert moves to SAN format
+    board = game.board()
+
+    # Convert the moves to a list of strings in SAN format
+    moves = []
+    for move in main_line:
+        san_move = board.san(move)
+        moves.append(san_move)
+        board.push(move)
+
+    return moves
+
 
 def hash_pgn_to_8_characters(pgn):
     # Create a SHA-256 hash object

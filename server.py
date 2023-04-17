@@ -1,3 +1,4 @@
+import boto3
 from fastapi.responses import JSONResponse
 import chess.engine
 import requests
@@ -16,7 +17,12 @@ from io import StringIO
 from fastapi import HTTPException
 import glob
 
-from helpers import add_score_change, classify_opening, extract_moves_from_pgn, hash_pgn_to_8_characters, moves_to_pgn
+from helpers import add_score_change, classify_opening, extract_moves_from_game, extract_moves_from_pgn, hash_pgn_to_8_characters, moves_to_pgn
+
+bucket_name = "chess-gpt"
+expiration = 3600
+s3_client = boto3.client('s3')
+
 app = FastAPI()
 
 # Constants
@@ -78,7 +84,6 @@ async def get_openapi(request):
 
 class SearchRequest(BaseModel):
     name: Optional[str] = None
-    username_chess_com: Optional[str] = None
     color: Optional[str] = None
 
 
@@ -117,14 +122,13 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                         break
                     moves.append(node.move.uci())
 
-                # Get the opening name
-                board = game.board()
-                for move in moves:
-                    board.push(chess.Move.from_uci(move))
+                # # Get the opening name
+                # board = game.board()
+                # for move in moves:
+                #     board.push(chess.Move.from_uci(move))
                 
                 game, root_node, ply_count = classify_opening(game)
-
-                moves = extract_moves_from_pgn(pgn_file)
+                moves = extract_moves_from_game(game)
                 pgn_moves = moves_to_pgn(moves)
 
                 opening = game.headers["Opening"]
@@ -170,7 +174,6 @@ async def search_games(request: SearchRequest):
 # Define a data model for the request body
 class EvaluateMovesRequest(BaseModel):
     pgn_id: Optional[str]
-    pgn: Optional[str]
 
 # Define a data model for the response
 
@@ -181,15 +184,12 @@ class Evaluation(BaseModel):
 # Define the endpoint for evaluating moves
 
 @app.post("/evaluate_moves", response_model=Evaluation)
-async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. Only show change if > 15. Can query game using pgn_id or pgn directly. Use id for faster request and processing") -> Evaluation:
+async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. Return a table of all the worst moves made by each player (player, move_number)") -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
     limit_per_move = 0.1
     try:
-        if request.pgn_id:
-            pgn_data = GAMES[request.pgn_id]
-        else:
-            pgn_data = request.pgn
+        pgn_data = GAMES[request.pgn_id]
         pgn_data = add_score_change(pgn_data, engine, limit_per_move)
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid PGN")
@@ -197,24 +197,25 @@ async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate sc
     engine.close()
     return Evaluation(pgn_with_score_change=pgn_data)
 
-bucket_name = "chess-gpt"
-import boto3
-expiration = 3600
-s3_client = boto3.client('s3')
+
 
 
 class GenerateGifGameRequest(BaseModel):
-    pgn_data: str
+    pgn_data: Optional[str]
+    pgn_id: Optional[str]
     reverse: bool = False
 
 @app.post("/generate-gif-game/", description="Generate a gif game from a PGN file. Use reverse if player is black. Embed the gif in markdown with ![]({url})")
 async def generate_gif_game(request: GenerateGifGameRequest):
-    pgn_data: str = request.pgn_data
+    if request.pgn_id:
+        pgn_data = GAMES[request.pgn_id]
+    else:
+        pgn_data = request.pgn_data
     reverse: bool = request.reverse
     import uuid
     import tempfile
     from pgn_to_gif import PgnToGifCreator
-    creator = PgnToGifCreator(reverse=reverse, duration=0.3,)
+    creator = PgnToGifCreator(reverse=reverse, duration=1.3)
 
     with tempfile.TemporaryDirectory() as temp_dir:
         input_pgn_path = os.path.join(temp_dir, "input.pgn")
