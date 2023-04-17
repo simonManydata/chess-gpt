@@ -117,6 +117,9 @@ class PgnToGifCreator:
         board_image = self._initial_board.copy()
         frames = [board_image.copy()]
 
+        if not pgn:
+            return
+        print(f"Creating gif for {pgn}...")
         game = chess.ChessGame(pgn)
 
         while not game.is_finished:

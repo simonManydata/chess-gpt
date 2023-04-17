@@ -33,9 +33,6 @@ components:
         date:
           title: Date
           type: string
-        link:
-          title: Link
-          type: string
         opening:
           title: Opening
           type: string
@@ -55,8 +52,16 @@ components:
       - result
       - opening
       - pgn_id
-      - link
       title: GameInfo
+      type: object
+    GameLink:
+      properties:
+        link:
+          title: Link
+          type: string
+      required:
+      - link
+      title: GameLink
       type: object
     GenerateGifGameRequest:
       properties:
@@ -144,10 +149,34 @@ paths:
                 $ref: '#/components/schemas/HTTPValidationError'
           description: Validation Error
       summary: Evaluate Moves
+  /game/{pgn_id}:
+    get:
+      operationId: get_game_link_game__pgn_id__get
+      parameters:
+      - in: path
+        name: pgn_id
+        required: true
+        schema:
+          title: Pgn Id
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GameLink'
+          description: Successful Response
+        '422':
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HTTPValidationError'
+          description: Validation Error
+      summary: Get Game Link
   /games:
     post:
-      description: Search for games by player name, color, or opening. Always return
-        the link as clickable.
+      description: When returning game info, make the link to the game clickable in
+        markdown
       operationId: search_games_games_post
       requestBody:
         content:

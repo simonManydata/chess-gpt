@@ -117,7 +117,28 @@ class GameInfo(BaseModel):
     result: str
     opening: str
     pgn_id: str
+
+
+import urllib.parse
+# link = f"https://chess.com/analysis?pgn={pgn_full}"
+# link = urllib.parse.quote(link, safe=":/?=")
+
+
+
+class GameLink(BaseModel):
     link: str
+
+# api endpoint to get link to game
+@app.get("/game/{pgn_id}", response_model=GameLink)
+async def get_game_link(pgn_id: str):
+    pgn_full = GAMES[pgn_id]
+    game = chess.pgn.read_game(StringIO(pgn_full))
+    moves = extract_moves_from_game(game)
+    pgn_moves = moves_to_pgn(moves)
+    link = f"https://chess.com/analysis?pgn={pgn_moves}"
+    link = urllib.parse.quote(link, safe=":/?=")
+    return {"link": link}
+
 def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper bound
     games = []
 
@@ -160,12 +181,7 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                 opening = game.headers["Opening"]
 
                 pgn_id = hash_pgn_to_8_characters(pgn_moves)
-                GAMES[pgn_id] = pgn_moves
-
-                import urllib.parse
-                link = f"https://chess.com/analysis?pgn={pgn_full}"
-                link = urllib.parse.quote(link, safe=":/?=")
-
+                GAMES[pgn_id] = pgn_full
                 
                 game_info = GameInfo(
                     date=game.headers.get("Date", ""),
@@ -174,7 +190,6 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                     result=game.headers.get("Result", ""),
                     opening=opening,
                     pgn_id=pgn_id,
-                    link=link,
                 )
                 
                 games.append(game_info)
@@ -262,11 +277,10 @@ async def generate_gif_game(request: GenerateGifGameRequest):
 
     with tempfile.TemporaryDirectory() as temp_dir:
         input_pgn_path = os.path.join(temp_dir, "input.pgn")
+        with open(input_pgn_path, "w") as f:
+            f.write(pgn_data)
         random_filename = str(uuid.uuid4())
         output_gif_path = os.path.join(temp_dir, f"{random_filename}.gif")
-
-        with open(input_pgn_path, "w") as pgn_file:
-            pgn_file.write(pgn_data)
 
         creator.create_gif(input_pgn_path, out_path=output_gif_path)
 
@@ -277,6 +291,8 @@ async def generate_gif_game(request: GenerateGifGameRequest):
         # Upload the file to S3
         s3 = boto3.client("s3")
         s3.upload_file(output_gif_path, bucket_name, object_key)
+        # remove the file from the server
+        os.remove(output_gif_path)
 
         # Generate a presigned URL
         signed_url = s3_client.generate_presigned_url(
