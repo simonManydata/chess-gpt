@@ -1,3 +1,4 @@
+import hashlib
 import chess
 import json
 import os
@@ -120,3 +121,62 @@ def classify_opening(game):
             node = prev_node
 
         return node.root(), root_node, ply_count
+
+
+def moves_to_pgn(moves):
+    # Initialize an empty list to store moves with move numbers
+    moves_with_numbers = []
+
+    # Iterate over the moves and add move numbers
+    for i, move in enumerate(moves, start=1):
+        # If it's White's move, add the move number before the move
+        if i % 2 == 1:
+            move_number = (i + 1) // 2
+            moves_with_numbers.append(f"{move_number}. {move}")
+        # If it's Black's move, just add the move
+        else:
+            moves_with_numbers.append(move)
+
+    # Join the moves with space to form the PGN string
+    pgn_string = " ".join(moves_with_numbers)
+
+    return pgn_string
+
+
+def extract_moves_from_pgn(pgn_string):
+    # Create a file-like object from the PGN string
+    pgn_file = io.StringIO(pgn_string)
+
+    # Parse the PGN data
+    game = chess.pgn.read_game(pgn_file)
+
+    # Get the main line (list of moves) from the game
+    main_line = game.mainline_moves()
+
+    # Create a chess board to convert moves to SAN format
+    board = game.board()
+
+    # Convert the moves to a list of strings in SAN format
+    moves = []
+    for move in main_line:
+        san_move = board.san(move)
+        moves.append(san_move)
+        board.push(move)
+
+    return moves
+
+
+def hash_pgn_to_8_characters(pgn):
+    # Create a SHA-256 hash object
+    sha256 = hashlib.sha256()
+
+    # Hash the PGN string
+    sha256.update(pgn.encode('utf-8'))
+
+    # Get the hexadecimal representation of the hash
+    hash_hex = sha256.hexdigest()
+
+    # Take the first 4 characters of the hash
+    short_hash = hash_hex[:8]
+
+    return short_hash

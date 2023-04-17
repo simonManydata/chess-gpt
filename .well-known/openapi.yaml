@@ -5,8 +5,9 @@ components:
         pgn:
           title: Pgn
           type: string
-      required:
-      - pgn
+        pgn_id:
+          title: Pgn Id
+          type: string
       title: EvaluateMovesRequest
       type: object
     Evaluation:
@@ -87,7 +88,9 @@ paths:
         name: description
         required: false
         schema:
-          default: Evaluate score change for each moves. Only show change if > 15
+          default: Evaluate score change for each moves. Only show change if > 15.
+            Can query game using pgn_id or pgn directly. Use id for faster request
+            and processing
           title: Description
       requestBody:
         content:

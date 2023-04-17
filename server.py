@@ -16,7 +16,7 @@ from io import StringIO
 from fastapi import HTTPException
 import glob
 
-from helpers import add_score_change, classify_opening
+from helpers import add_score_change, classify_opening, extract_moves_from_pgn, hash_pgn_to_8_characters, moves_to_pgn
 app = FastAPI()
 
 # Constants
@@ -90,8 +90,14 @@ def is_name_match(name, player_name):
 
 openings = glob.glob("chess-openings/*.tsv")
 
+
+
+GAMES = {
+}
+
 def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper bound
     games = []
+
     with open(pgn_file) as file:
         while True:
             game = chess.pgn.read_game(file)
@@ -118,9 +124,13 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                 
                 game, root_node, ply_count = classify_opening(game)
 
+                moves = extract_moves_from_pgn(pgn_file)
+                pgn_moves = moves_to_pgn(moves)
 
                 opening = game.headers["Opening"]
 
+                pgn_id = hash_pgn_to_8_characters(pgn_moves)
+                GAMES[pgn_id] = pgn_moves
                 game_info = {
                     "event": game.headers.get("Event", ""),
                     "site": game.headers.get("Site", ""),
@@ -129,8 +139,9 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                     "white": white,
                     "black": black,
                     "result": game.headers.get("Result", ""),
-                    "mainline_moves": str(game.mainline_moves()),
+                    "mainline_moves": pgn_moves,
                     "opening": opening,
+                    "pgn_id": pgn_id,
                 }
                 games.append(game_info)
     return games
@@ -158,8 +169,8 @@ async def search_games(request: SearchRequest):
 
 # Define a data model for the request body
 class EvaluateMovesRequest(BaseModel):
-    pgn: str
-    
+    pgn_id: Optional[str]
+    pgn: Optional[str]
 
 # Define a data model for the response
 
@@ -170,12 +181,15 @@ class Evaluation(BaseModel):
 # Define the endpoint for evaluating moves
 
 @app.post("/evaluate_moves", response_model=Evaluation)
-async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. Only show change if > 15") -> Evaluation:
+async def evaluate_moves(request: EvaluateMovesRequest, description="Evaluate score change for each moves. Only show change if > 15. Can query game using pgn_id or pgn directly. Use id for faster request and processing") -> Evaluation:
     engine = chess.engine.SimpleEngine.popen_uci(STOCKFISH_PATH)
     # Parse the PGN
     limit_per_move = 0.1
     try:
-        pgn_data = request.pgn
+        if request.pgn_id:
+            pgn_data = GAMES[request.pgn_id]
+        else:
+            pgn_data = request.pgn
         pgn_data = add_score_change(pgn_data, engine, limit_per_move)
     except ValueError:
         raise HTTPException(status_code=400, detail="Invalid PGN")
