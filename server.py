@@ -16,7 +16,7 @@ from io import StringIO
 from fastapi import HTTPException
 import glob
 
-from helpers import add_score_change
+from helpers import add_score_change, classify_opening
 app = FastAPI()
 
 # Constants
@@ -75,45 +75,6 @@ async def get_openapi(request):
     return FileResponse(file_path, media_type="text/json")
 
 
-def get_games_from_chess_com(username):
-    url = f"https://api.chess.com/pub/player/{username}/games/archives"
-    response = requests.get(url)
-
-    if response.status_code != 200:
-        raise Exception(
-            f"Failed to get games for user {username}: {response.text}")
-
-    archives = response.json()["archives"]
-
-    games = []
-    for archive_url in archives:
-        month_games = requests.get(archive_url)
-        if month_games.status_code != 200:
-            raise Exception(
-                f"Failed to get games for user {username}: {month_games.text}")
-
-        pgn_data = month_games.text
-        
-        pgn_file = StringIO(pgn_data)
-        print(f"pgn_file: {month_games.text} for {username}")
-
-        while True:
-            game = chess.pgn.read_game(pgn_file)
-            if game is None:
-                break
-
-            game_info = {
-                "event": game.headers.get("Event", ""),
-                "site": game.headers.get("Site", ""),
-                "date": game.headers.get("Date", ""),
-                "round": game.headers.get("Round", ""),
-                "white": game.headers.get("White", ""),
-                "black": game.headers.get("Black", ""),
-                "result": game.headers.get("Result", ""),
-            }
-            games.append(game_info)
-    return games
-
 
 class SearchRequest(BaseModel):
     name: Optional[str] = None
@@ -155,9 +116,10 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                 for move in moves:
                     board.push(chess.Move.from_uci(move))
                 
-                import hashlib
-                mainline_moves_hash = hashlib.shake_128(str(game.mainline_moves()).encode('utf-8')).hexdigest(4)
+                game, root_node, ply_count = classify_opening(game)
 
+
+                opening = game.headers["Opening"]
 
                 game_info = {
                     "event": game.headers.get("Event", ""),
@@ -168,8 +130,7 @@ def get_games_from_pgn(pgn_file, name, number_moves=300): # 300 moves as upper b
                     "black": black,
                     "result": game.headers.get("Result", ""),
                     "mainline_moves": str(game.mainline_moves()),
-                    "hash": mainline_moves_hash,
-                    # "opening_name": opening_name
+                    "opening": opening,
                 }
                 games.append(game_info)
     return games
