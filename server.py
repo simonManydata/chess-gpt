@@ -275,10 +275,15 @@ async def generate_gif_game(request: GenerateGifGameRequest):
     from pgn_to_gif import PgnToGifCreator
     creator = PgnToGifCreator(reverse=reverse, duration=1.3)
 
+
+    game = chess.pgn.read_game(StringIO(pgn_data))
+    moves = extract_moves_from_game(game)
+    pgn_moves = moves_to_pgn(moves)
+
     with tempfile.TemporaryDirectory() as temp_dir:
         input_pgn_path = os.path.join(temp_dir, "input.pgn")
         with open(input_pgn_path, "w") as f:
-            f.write(pgn_data)
+            f.write(pgn_moves)
         random_filename = str(uuid.uuid4())
         output_gif_path = os.path.join(temp_dir, f"{random_filename}.gif")
 

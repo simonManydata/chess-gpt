@@ -137,6 +137,7 @@ class ChessGame:
                 s for s, pt in self.state.items()
                 if pt == piece and key in s and self._check_line(s, to))
         elif p == 'b':
+            print(f"Checking diagonal for {piece} from {key} to {to} on move {move}")
             return next(
                 s for s, pt in self.state.items()
                 if pt == piece and key in s and self._check_diagonal(s, to))
