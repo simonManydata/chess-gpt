@@ -5,6 +5,7 @@ numpy
 openai
 fastapi
 uvicorn
+
 starlette
 python-dotenv
 PyYAML
